@@ -1,0 +1,39 @@
+<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+<span class="nav-toggle" onclick="document.querySelector('.nav-right').classList.toggle('is-active')">
+    <span></span>
+    <span></span>
+    <span></span>
+</span>
+
+<!-- This "nav-menu" is hidden on mobile -->
+<!-- Add the modifier "is-active" to display it on mobile -->
+<div class="nav-right nav-menu">
+    {{#if user}}
+        <a class="nav-item is-tab" href="/profile">
+            Profile
+        </a>
+        <a class="nav-item is-tab" href="/logout">
+            <figure class="image is-16x16" style="margin-right: 8px;">
+                <img src="/images/log-out.svg" alt="">
+            </figure>
+            Logout
+        </a>
+    {{else}}
+        <div class="nav-item">
+            <div class="field is-grouped">
+                <p class="control">
+                    <a class="button is-primary" href="/signup">
+                        Sign up
+                    </a>
+                </p>
+                <a class="button" href="/login">
+                    <figure class="image is-16x16" style="margin-right: 8px;">
+                        <img src="/images/log-in.svg" alt="">
+                    </figure>
+                    Log in
+                </a>
+            </div>
+        </div>
+    {{/if}}
+</div>
