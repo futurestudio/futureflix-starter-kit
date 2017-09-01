@@ -1,0 +1,31 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+.github-todos
+
+pids
+logs
+results
+
+node_modules
+npm-debug.log
+
+# code coverage folder
+coverage
+
+# Secrets
+secrets.env
+
+# IDEA IntelliJ/Webstorm
+.idea
+
+# Vagrant
+.vagrant
+
+# VS Code
+.vscode
