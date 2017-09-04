@@ -1,4 +1,4 @@
-[![Futureflix](https://futurestud.io/blog/content/images/2017/07/futureflix-1.jpg)](https://learnhapi.com)
+[![Futureflix](https://futurestud.io/blog/content/images/2017/07/futureflix-1.jpg)](http://learnhapi.com)
 
 # learn hapi — Starter Files
 This repository contains the **Futureflix starter kit** for the learn hapi learning path.
