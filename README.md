@@ -1,7 +1,9 @@
-[![Futureflix](https://futurestud.io/blog/content/images/2017/07/futureflix-1.jpg)](https://learnhapi.com)
+[![Futureflix](https://futurestud.io/blog/content/images/2017/09/futureflix_1024.jpg)](https://learnhapi.com)
 
 # learn hapi — Starter Files
-Intro
+This repository contains the **Futureflix starter kit** for the learn hapi learning path.
+
+At this point, the current project’s implementation is only available for enrolled students. If you’re part of the Future Studio University, you’ve access to the code, hosted on GitLab.
 
 
 ## Getting Help
