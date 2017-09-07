@@ -21,7 +21,7 @@
     "boom": "~5.2.0",
     "es6-promisify": "~5.0.0",
     "handlebars": "~4.0.10",
-    "hapi": "~16.4.3",
+    "hapi": "~16.5.2",
     "hoek": "~4.2.0",
     "inert": "~4.2.1",
     "joi": "~10.6.0",
@@ -30,11 +30,13 @@
   },
   "keywords": [
     "hapi",
+    "hapi.js",
+    "node",
     "node.js",
     "tutorials",
+    "tutorial",
     "mongodb",
-    "futureflix",
-    "tutorial"
+    "futureflix"
   ],
   "license": "MIT",
   "scripts": {
