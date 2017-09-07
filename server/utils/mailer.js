@@ -9,7 +9,6 @@ const htmlToText = require('html-to-text')
 const Templates = Path.resolve(__dirname, '..', 'server', 'email-templates')
 const Handlebars = require('handlebars')
 const Promisify = require('es6-promisify')
-
 const Transporter = Nodemailer.createTransport(PostmarkTransport({
   auth: {
     apiKey: process.env.POSTMARK_API_KEY
@@ -32,8 +31,6 @@ const prepareTemplate = (filename, options = {}) => {
       // use handlebars to render the email template
       // handlebars allows more complex templates with conditionals and nested objects, etc.
       // this way we have much more options to customize the templates based on given data
-      // e.g. if the user does not want to install MySQL, he wonâ€™t get the credentials
-      // for MySQL in his "server launched" email
       const template = Handlebars.compile(fileContent)
       const compiledHtml = template(options)
 
