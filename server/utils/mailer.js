@@ -20,7 +20,7 @@ const Transporter = Nodemailer.createTransport(PostmarkTransport({
  * options: data which will be used to replace the placeholders within the template
  **/
 const prepareTemplate = (filename, options = {}) => {
-  return Promise.promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const filePath = Path.resolve(Templates, `${filename}.html`)
 
     Fs.readFile(filePath, 'utf8', (err, fileContent) => {
