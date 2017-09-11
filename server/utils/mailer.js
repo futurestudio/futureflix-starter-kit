@@ -54,6 +54,11 @@ exports.send = (template, user, subject, data) => {
       text
     }
 
-    return Transporter.sendMail(mailOptions)
+    // fire and forget
+    // will be changed later to use a queue with retries
+    // to handle the case of downtimes on the email delivery service
+    return Transporter.sendMail(mailOptions).catch(err => {
+      console.log(err)
+    })
   })
 }
