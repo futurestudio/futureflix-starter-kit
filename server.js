@@ -31,7 +31,7 @@ server.register([
   },
   {
     register: require('./server/user-profile')
-  },
+  }
 ], err => {
   if (err) {
     throw err
