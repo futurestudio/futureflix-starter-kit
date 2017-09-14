@@ -44,6 +44,15 @@ const prepareTemplate = (filename, options = {}) => {
   })
 }
 
+/**
+ * Send emails with Node.js using Nodemailer
+ *
+ * @param  {string} template the template name which will be used to render an HTML mail
+ * @param  {object} user     the user model, required for the recipient
+ * @param  {string} subject  subject line
+ * @param  {object} data     view specific data that will be rendered into the view
+ * @return {Promise}
+ */
 exports.send = (template, user, subject, data) => {
   return prepareTemplate(template, data).then(({ html, text }) => {
     const mailOptions = {
