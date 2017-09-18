@@ -28,18 +28,23 @@
     "lodash": "~4.17.4",
     "vision": "~4.1.1"
   },
+  "engines": {
+    "node": ">= 6.0"
+  },
   "keywords": [
+    "futureflix",
     "hapi",
     "hapi.js",
+    "mongodb",
     "node",
     "node.js",
-    "tutorials",
     "tutorial",
-    "mongodb",
-    "futureflix"
+    "tutorials"
   ],
   "license": "MIT",
+  "private": true,
   "scripts": {
+    "sample": "node ./data/load-sample-data.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
