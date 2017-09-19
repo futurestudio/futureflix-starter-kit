@@ -1,11 +1,12 @@
 'use strict'
 
-// import environment variables from local secrets.env file
 const Fs = require('fs')
 const _ = require('lodash')
 const Path = require('path')
 const Listr = require('listr')
 const Dotenv = require('dotenv')
+
+// import environment variables from local secrets.env file
 Dotenv.config({ path: Path.resolve(__dirname, '..', 'secrets.env') })
 
 // import models
@@ -24,24 +25,33 @@ const Shows = JSON.parse(
 /**
  * Load Futureflix sample movies and TV shows into MongoDB
  *
+ * This method deletes existing data before importing the
+ * samples. Be careful here, there’s no approval question
+ * before deletion.
+ *
  * @return {Task} tasks for listr
  */
 function pumpItUp() {
-  return _.concat(destroyDB(), [
-    {
-      title: 'Importing movies and TV shows 📺 👌',
-      task: (ctx, task) => {
-        task.output = 'Importing movies'
+  return _.concat(
+    // add task to remove data before import to avoid errors
+    destroyDB(),
+    // the actual task to import data
+    [
+      {
+        title: 'Importing movies and TV shows 📺 👌',
+        task: (ctx, task) => {
+          task.output = 'Importing movies'
 
-        // import movies …
-        return Movie.insertMany(Movies).then(() => {
-          // … then TV shows
-          task.output = 'Importing TV shows'
-          return Show.insertMany(Shows)
-        })
+          // import movies …
+          return Movie.insertMany(Movies).then(() => {
+            // … then TV shows
+            task.output = 'Importing TV shows'
+            return Show.insertMany(Shows)
+          })
+        }
       }
-    }
-  ])
+    ]
+  )
 }
 
 /**
