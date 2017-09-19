@@ -88,9 +88,9 @@ function destroyDB() {
  * @param  {Listr} tasks  Listr instance with tasks
  * @return {void}
  */
-function kickoff(tasks, ctx) {
+function kickoff(tasks) {
   tasks
-    .run(ctx)
+    .run()
     .then(process.exit)
     .catch(process.exit)
 }
