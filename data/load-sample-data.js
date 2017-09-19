@@ -2,24 +2,97 @@
 
 // import environment variables from local secrets.env file
 const Fs = require('fs')
+const _ = require('lodash')
 const Path = require('path')
+const Listr = require('listr')
 const Dotenv = require('dotenv')
 Dotenv.config({ path: Path.resolve(__dirname, '..', 'secrets.env') })
 
+// import models
 const Models = require(Path.resolve(__dirname, '..', 'server', 'models'))
 const Movie = Models.Movie
 const Show = Models.Show
 
+// read movies and TV show sample data as JSON
+const Movies = JSON.parse(
+  Fs.readFileSync(Path.resolve(__dirname, 'movies.json'), 'utf8')
+)
+const Shows = JSON.parse(
+  Fs.readFileSync(Path.resolve(__dirname, 'shows.json'), 'utf8')
+)
+
+/**
+ * Load Futureflix sample movies and TV shows into MongoDB
+ *
+ * @return {Task} tasks for listr
+ */
 function pumpItUp() {
-  console.log('Importing data 📺 👌')
+  return _.concat(destroyDB(), [
+    {
+      title: 'Importing movies and TV shows 📺 👌',
+      task: (ctx, task) => {
+        task.output = 'Importing movies'
+
+        // import movies …
+        return Movie.insertMany(Movies).then(() => {
+          // … then TV shows
+          task.output = 'Importing TV shows'
+          return Show.insertMany(Shows)
+        })
+      }
+    }
+  ])
 }
 
+/**
+ * Delete all Futureflix movies and TV shows from MongoDB
+ *
+ * @return {Task} tasks for listr
+ */
 function destroyDB() {
-  console.log('Au revior data 😢 🔥')
+  return [
+    {
+      title: 'Au revior data 😢 🔥',
+      skip: () =>
+        Movie.findOne().then(movie => {
+          // skip task (return true) if no movie is available
+          return movie ? false : true
+        }),
+      task: (ctx, task) => {
+        task.output = 'Deleting movies'
+
+        // delete movies …
+        return Movie.remove().then(() => {
+          // … then TV shows
+          task.output = 'Deleting TV shows'
+          return Show.remove()
+        })
+      }
+    }
+  ]
 }
 
+/**
+ * Start tasks to prepare or destroy data in MongoDB
+ *
+ * @param  {Listr} tasks  Listr instance with tasks
+ * @return {void}
+ */
+function kickoff(tasks, ctx) {
+  tasks
+    .run(ctx)
+    .then(process.exit)
+    .catch(process.exit)
+}
+
+/**
+ * Entry point for the NPM "pumpitup" and "cleanup" scripts
+ * Imports movie and TV show sample data to MongoDB
+ */
 if (process.argv.includes('--destroy')) {
-  destroyDB()
+  const cleanUp = destroyDB()
+  kickoff(new Listr(cleanUp))
 } else {
-  pumpItUp()
+  const pumpIt = pumpItUp()
+  kickoff(new Listr(pumpIt))
 }
