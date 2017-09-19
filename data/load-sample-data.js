@@ -29,9 +29,9 @@ const Shows = JSON.parse(
  * samples. Be careful here, there’s no approval question
  * before deletion.
  *
- * @return {Task} tasks for listr
+ * @return {Array} tasks for listr
  */
-function pumpItUp() {
+function pumpItUp () {
   return _.concat(
     // add task to remove data before import to avoid errors
     destroyDB(),
@@ -57,17 +57,16 @@ function pumpItUp() {
 /**
  * Delete all Futureflix movies and TV shows from MongoDB
  *
- * @return {Task} tasks for listr
+ * @return {Array} tasks for listr
  */
-function destroyDB() {
+function destroyDB () {
   return [
     {
       title: 'Au revior data 😢 🔥',
-      skip: () =>
-        Movie.findOne().then(movie => {
-          // skip task (return true) if no movie is available
-          return movie ? false : true
-        }),
+      skip: () => Movie.findOne().then(movie => {
+        // skip task if no movie is available
+        return !movie
+      }),
       task: (ctx, task) => {
         task.output = 'Deleting movies'
 
@@ -88,7 +87,7 @@ function destroyDB() {
  * @param  {Listr} tasks  Listr instance with tasks
  * @return {void}
  */
-function kickoff(tasks) {
+function kickoff (tasks) {
   tasks
     .run()
     .then(process.exit)
