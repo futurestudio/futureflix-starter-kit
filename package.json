@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "boom": "~5.2.0",
+    "dotenv": "~4.0.0",
     "handlebars": "~4.0.10",
     "hapi": "~16.6.0",
     "hoek": "~4.2.0",
@@ -26,6 +27,7 @@
     "inert": "~4.2.1",
     "joi": "~10.6.0",
     "lodash": "~4.17.4",
+    "mongoose": "~4.10.8",
     "vision": "~4.1.1"
   },
   "engines": {
@@ -44,7 +46,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "sample": "node ./data/load-sample-data.js",
+    "pumpitup": "node ./data/load-sample-data.js",
+    "cleanup": "node ./data/load-sample-data.js --destroy",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
