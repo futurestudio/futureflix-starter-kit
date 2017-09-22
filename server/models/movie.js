@@ -18,6 +18,10 @@ const movieSchema = new Schema({
     fanart: Number,
     omdb: Number
   },
+  images: {
+    poster: String,
+    background: String
+  },
   poster: String,
   banner: String,
   fanart: String,
