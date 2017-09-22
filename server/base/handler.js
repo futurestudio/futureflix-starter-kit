@@ -14,19 +14,28 @@ const Handler = {
       }
     },
     handler: function (request, reply) {
-      Movie.find().limit(6).then(movies => {
-        return Show.find().limit(12).then(shows => {
-          return Promise.resolve({ movies, shows })
+      Movie.find()
+        .limit(6)
+        .then(movies => {
+          return Show.find()
+            .limit(12)
+            .then(shows => {
+              return Promise.resolve({ movies, shows })
+            })
         })
-      }).then(({ movies, shows }) => {
-        const random = _.random(0, movies.length - 1)
+        .then(({ movies, shows }) => {
+          const random = _.random(0, movies.length - 1)
 
-        reply.view('index', {
-          background: '/images/covers/a-monster-calls-poster.jpg',
-          movies,
-          shows
-        }, { layout: 'hero' })
-      })
+          reply.view(
+            'index',
+            {
+              background: '/images/covers/a-monster-calls-poster.jpg',
+              movies,
+              shows
+            },
+            { layout: 'hero' }
+          )
+        })
     }
   },
 
@@ -68,7 +77,9 @@ const Handler = {
       const accept = request.headers.accept
 
       if (accept && accept.match(/json/)) {
-        return reply(Boom.notFound('Fuckity fuck, this resource isn’t available.'))
+        return reply(
+          Boom.notFound('Fuckity fuck, this resource isn’t available.')
+        )
       }
 
       reply.view('404').code(404)

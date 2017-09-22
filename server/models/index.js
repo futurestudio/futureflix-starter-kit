@@ -17,6 +17,6 @@ Mongoose.connection.on('error', err => {
 
 // use ES6 shorthands: "propertyName: variableName" equals "propertyName"
 module.exports = {
-  Movie: Mongoose.model('Movie'),
-  Show: Mongoose.model('Show')
+  Movie,
+  Show
 }

@@ -36,7 +36,7 @@ const movieSchema = new Schema({
   homepage: String,
   rating: Number,
   votes: Number,
-  genres: [String],
+  genres: [ String ],
   language: String,
   certification: String
 })

@@ -34,7 +34,7 @@ const showSchema = new Schema({
   rating: Number,
   votes: Number,
   runtime: Number,
-  genres: [String],
+  genres: [ String ],
   language: String,
   certification: String,
   network: String,

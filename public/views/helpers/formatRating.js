@@ -1,5 +1,5 @@
 'use strict'
 
-module.exports = (rating, options) => {
+module.exports = rating => {
   return rating ? rating.toFixed(1) : ''
 }
