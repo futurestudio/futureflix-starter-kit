@@ -62,7 +62,7 @@ function pumpItUp () {
 function destroyDB () {
   return [
     {
-      title: 'Au revior data 😢 🔥',
+      title: 'Au revior existing data 😢 🔥',
       skip: () => Movie.findOne().then(movie => {
         // skip task if no movie is available
         return !movie
