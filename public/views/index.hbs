@@ -21,12 +21,12 @@
         height: 100%;
         background-size: cover;
         background-position: center;
-        background: -moz-radial-gradient(center, circle cover, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0.7)), color-stop(100%, rgba(0,0,0,0.3)));
-        background: -webkit-radial-gradient(center, circle cover, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-        background: -o-radial-gradient(center, circle cover, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-        background: -ms-radial-gradient(center, circle cover, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-        background: radial-gradient(center, circle cover, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        background: -moz-radial-gradient(center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.7)), color-stop(100%, rgba(0, 0, 0, 0.3)));
+        background: -webkit-radial-gradient(center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background: -o-radial-gradient(center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background: -ms-radial-gradient(center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background: radial-gradient(center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
     }
 
     .hero {
@@ -37,15 +37,16 @@
         position: relative;
     }
 
-    .hero.is-dark .nav-item a:not(.button), .hero.is-dark a.nav-item {
+    .hero.is-dark .nav-item a:not(.button),
+    .hero.is-dark a.nav-item {
         color: rgba(255, 255, 255, .8)
     }
-
 </style>
 
 <section class="hero is-dark is-bold is-large">
 
-    {{!--<div class="hero-bg" style="background-image: url('https://walter.trakt.tv/images/shows/000/060/278/fanarts/full/6cb6bd4982.jpg.webp');"></div>--}}
+    {{!--
+    <div class="hero-bg" style="background-image: url('https://walter.trakt.tv/images/shows/000/060/278/fanarts/full/6cb6bd4982.jpg.webp');"></div>--}}
     <div class="hero-bg" style="background-image: url('/images/covers/a-monster-calls-poster.jpg');"></div>
     <div class="shadow"></div>
 
@@ -77,23 +78,19 @@
     <div class="container">
         <div class="columns content">
             <div class="column">
-                <img src="/images/covers/fargo.jpg" width="">
+                <h2>Top Movies</h2>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns content">
+            {{#each movies}}
             <div class="column">
-                <img src="/images/covers/gotham.jpg" width="">
+                <a href="/movies/{{ids.slug}}">
+                    <img src="{{images.poster}}" width="">
+                </a>
             </div>
-            <div class="column">
-                <img src="/images/covers/sherlock.jpg" width="">
-            </div>
-            <div class="column">
-                <img src="/images/covers/scorpion.jpg" width="">
-            </div>
-            <div class="column">
-                <img src="/images/covers/westworld.jpg" width="">
-            </div>
-            <div class="column">
-                <img src="/images/covers/stranger-things.jpeg" width="">
-            </div>
+            {{/each}}
         </div>
     </div>
 </section>

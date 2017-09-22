@@ -1,26 +1,121 @@
-<div class="columns content">
-    <div class="column"></div>
-    <div class="column is-three-quarters">
-        <div class="is-clearfix">
-            <div class="is-pulled-left">
+{{#movie}}
+
+<!-- Hero content: will be in the middle -->
+
+<style>
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 10%;
+        opacity: .8;
+        transition: all 1s;
+    }
+
+    .hero {
+        background-color: black;
+        background-size: cover;
+        background-position: 50% 10%;
+        color: white;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .hero.is-dark .nav-item a:not(.button),
+    .hero.is-dark a.nav-item {
+        color: rgba(255, 255, 255, .8)
+    }
+</style>
+
+<section class="hero is-dark is-bold is-medium">
+
+    <div class="hero-bg" style="background-image: url({{images.background}});"></div>
+    <div class="shadow"></div>
+
+    <!-- Hero header: will stick at the top -->
+    <div class="hero-head">
+        {{> hero-header}}
+    </div>
+
+    <div class="hero-body">
+        <div class="container">
+            <div class="column is-half">
                 <h1 class="title">
                     {{title}}
                 </h1>
-                <p class="subtitle is-small">
-                    {{year}} <span class="has-text-info">{{rating}}</span>
+                <h2 class="subtitle has-text-grey-lighter">
+                    {{tagline}}
+                </h2>
+                <p class="has-text-grey">
+                    {{year}} &bull; <span class="certification">{{certification}}</span> &bull; {{formatRuntime runtime}}
+                </p>
+                <p class="has-text-grey-lighter has-margin-top-1">
+                    {{overview}}
+                </p>
+                <p class="field">
+                    <a class="button add-to-watchlist has-margin-top-1">
+                        <span class="icon">
+                            <img src="/images/plus.svg" alt="Add to Watchlist">
+                        </span>
+                    </a>
                 </p>
             </div>
-            <div class="is-pulled-right">
-                <br>
-                <img src="/images/heart.svg" alt="">
+        </div>
+    </div>
+
+</section>
+
+<div class="content container">
+    <div class="columns is-one-quarter">
+        <div class="column">
+            <img src="{{images.poster}}">
+
+            <h2>Genres</h2>
+            <div class="tags">
+                {{#each genres}} <span class="tag is-warning">{{this}}</span> {{/each}}
             </div>
         </div>
 
-        <hr>
+        <div class="column is-three-quarters content has-white-background">
+            <div class="container is-fluid">
+                <h1>
+                    {{title}}
+                </h1>
 
-        <div>
-            <img src="/images/covers/a-monster-calls.jpg" width="200">
+                <p class="subtitle has-text-grey">
+                    <img src="/images/star-yellow.svg" alt=""> {{formatRating rating}} out of {{votes}} Votes
+                </p>
+                <p>
+                    <a href="{{homepage}}" class="button is-secondary is-small">
+                        Visit Homepage
+                    </a>
+                </p>
+                <p>
+                    {{overview}}
+                </p>
+
+                {{#if trailer}}
+                <h2>Trailer</h2>
+                <div class="video-container">
+                    <iframe src="{{video trailer}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                {{/if}}
+
+                <h2>Comments</h2>
+                {{#if comments}}
+                <div>
+                    {{! implement this as part of learnhapi.com :) }}
+                </div>
+                {{else}}
+                <div class="notification">
+                    Be the first who comments on {{title}}! {{! implement the actual commenting system as part of learnhapi.com :) }}
+                </div>
+                {{/if}}
+            </div>
         </div>
     </div>
-    <div class="column"></div>
 </div>
+{{/movie}}
