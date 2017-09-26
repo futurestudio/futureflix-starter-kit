@@ -20,7 +20,7 @@
   "dependencies": {
     "boom": "~5.2.0",
     "handlebars": "~4.0.10",
-    "hapi": "~16.6.0",
+    "hapi": "~16.6.2",
     "hoek": "~4.2.0",
     "html-to-text": "~3.3.0",
     "inert": "~4.2.1",
