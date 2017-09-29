@@ -1,4 +1,4 @@
-[![Futureflix](https://futurestud.io/blog/content/images/2017/07/futureflix-1.jpg)](http://learnhapi.com)
+[![Futureflix](https://futurestud.io/blog/content/images/2017/09/futureflix-movie.jpg)](http://learnhapi.com)
 
 # learn hapi — Starter Files
 This repository contains the **Futureflix starter kit** for the [learn hapi](http://learnhapi.com) learning path.
@@ -15,7 +15,7 @@ This repository accompanies you with the **Futureflix starter kit** and is not m
 
 
 ## Sending Pull Requests
-In case you found a different way to implement a feature, we’re happy to hear about it! Within the videos we’re using the code of this repository and want to keep it as close as possible. 
+In case you found a different way to implement a feature, we’re happy to hear about it! Within the videos we’re using the code of this repository and want to keep it as close as possible.
 
 It’s unlikely that we accept a pull request with functionality changes.
 
