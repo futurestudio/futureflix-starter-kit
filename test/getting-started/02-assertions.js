@@ -9,13 +9,14 @@ const lab = (exports.lab = Lab.script())
 // shortcuts from lab
 const experiment = lab.experiment
 const test = lab.test
+
 // shortcuts from code
 const expect = Code.expect
 
 experiment('hapi testing with lab and assertions with code,', () => {
   test('assert that 1 + 2 equals three', done => {
-    Code.expect(1 + 2).to.equal(3)
-    Code.expect('3').to.equal('3')
+    expect(1 + 2).to.equal(3)
+    expect('3').to.equal('3')
 
     done()
   })
