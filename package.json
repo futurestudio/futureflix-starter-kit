@@ -3,6 +3,9 @@
   "description": "Netflix like streaming platform — Future Studio Sample App",
   "version": "1.1.0",
   "author": "Future Studio <info@futurestud.io>",
+  "bugs": {
+    "url": "https://github.com/fs-opensource/futureflix-starter-kit/issues"
+  },
   "contributors": [
     {
       "name": "Marcus Poehls",
@@ -28,18 +31,27 @@
     "lodash": "~4.17.4",
     "vision": "~4.1.1"
   },
+  "devDependencies": {
+    "code": "~4.1.0",
+    "lab": "~14.3.1"
+  },
+  "homepage": "https://github.com/fs-opensource/futureflix-starter-kit",
   "keywords": [
+    "futureflix",
     "hapi",
     "hapi.js",
+    "mongodb",
     "node",
     "node.js",
-    "tutorials",
     "tutorial",
-    "mongodb",
-    "futureflix"
+    "tutorials"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fs-opensource/futureflix-starter-kit.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab --assert code --leaks --coverage"
   }
 }
