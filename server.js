@@ -49,9 +49,7 @@ server
     })
 
     // start your server
-    server.start().catch(err => {
-      throw err
-    })
+    server.start()
   })
   .catch(err => {
     throw err
