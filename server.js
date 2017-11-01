@@ -3,58 +3,56 @@
 const Hapi = require('hapi')
 const Path = require('path')
 
-// create new server instance
-const server = new Hapi.Server()
-
-// add server’s connection information
-server.connection({
+// create new server instance and connection information
+const server = new Hapi.Server({
   host: 'localhost',
   port: 3000
 })
 
 // register plugins to server instance
-server.register([
-  {
-    register: require('inert')
-  },
-  {
-    register: require('vision')
-  },
-  {
-    register: require('./server/authentication')
-  },
-  {
-    register: require('./server/base')
-  },
-  {
-    register: require('./server/add-user-to-views')
-  },
-  {
-    register: require('./server/user-profile')
-  }
-], err => {
-  if (err) {
-    throw err
-  }
-
-  const viewsPath = Path.resolve(__dirname, 'public', 'views')
-
-  server.views({
-    engines: {
-      hbs: require('handlebars')
+server
+  .register([
+    {
+      plugin: require('inert')
     },
-    path: viewsPath,
-    layoutPath: Path.resolve(viewsPath, 'layouts'),
-    layout: 'layout',
-    partialsPath: Path.resolve(viewsPath, 'partials'),
-    isCached: process.env.NODE_ENV === 'production',
-    context: {
-      title: 'Futureflix'
+    {
+      plugin: require('vision')
+    },
+    {
+      plugin: require('./server/authentication')
+    },
+    {
+      plugin: require('./server/base')
+    },
+    {
+      plugin: require('./server/add-user-to-views')
+    },
+    {
+      plugin: require('./server/user-profile')
     }
-  })
+  ])
+  .then(() => {
+    const viewsPath = Path.resolve(__dirname, 'public', 'views')
 
-  // start your server
-  server.start().catch(err => {
+    server.views({
+      engines: {
+        hbs: require('handlebars')
+      },
+      path: viewsPath,
+      layoutPath: Path.resolve(viewsPath, 'layouts'),
+      layout: 'layout',
+      partialsPath: Path.resolve(viewsPath, 'partials'),
+      isCached: process.env.NODE_ENV === 'production',
+      context: {
+        title: 'Futureflix'
+      }
+    })
+
+    // start your server
+    server.start().catch(err => {
+      throw err
+    })
+  })
+  .catch(err => {
     throw err
   })
-})

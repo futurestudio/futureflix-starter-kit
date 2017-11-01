@@ -21,31 +21,27 @@
     }
   ],
   "dependencies": {
-    "boom": "~5.2.0",
+    "boom": "~6.0.0",
     "handlebars": "~4.0.10",
-    "hapi": "~16.6.2",
-    "hoek": "~4.2.0",
+    "hapi": "~17.0.0-rc9",
+    "hoek": "~5.0.1",
     "html-to-text": "~3.3.0",
-    "inert": "~4.2.1",
+    "inert": "~5.0.0-rc8",
     "joi": "~10.6.0",
     "lodash": "~4.17.4",
-    "vision": "~4.1.1"
+    "vision": "~5.0.0-rc8"
   },
   "devDependencies": {
     "code": "~4.1.0",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.6.0",
+    "eslint-plugin-standard": "~3.0.1",
     "lab": "~14.3.1"
   },
   "homepage": "https://github.com/fs-opensource/futureflix-starter-kit",
-  "keywords": [
-    "futureflix",
-    "hapi",
-    "hapi.js",
-    "mongodb",
-    "node",
-    "node.js",
-    "tutorial",
-    "tutorials"
-  ],
+  "keywords": ["futureflix", "hapi", "hapi.js", "mongodb", "node", "node.js", "tutorial", "tutorials"],
   "license": "MIT",
   "repository": {
     "type": "git",
