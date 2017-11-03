@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "boom": "~5.2.0",
-    "handlebars": "~4.0.10",
+    "handlebars": "~4.0.11",
     "hapi": "~16.6.2",
     "hoek": "~4.2.0",
     "html-to-text": "~3.3.0",
@@ -33,7 +33,12 @@
   },
   "devDependencies": {
     "code": "~4.1.0",
-    "lab": "~14.3.1"
+    "lab": "~14.3.1",
+    "eslint-config-standard": "~10.2.1",
+    "eslint-plugin-import": "~2.8.0",
+    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-promise": "~3.6.0",
+    "eslint-plugin-standard": "~3.0.1"
   },
   "homepage": "https://github.com/fs-opensource/futureflix-starter-kit",
   "keywords": [
