@@ -14,23 +14,20 @@ const Handler = {
       }
     },
     handler: function (request, reply) {
-      Movie.find()
-        .limit(6)
+      Movie.random(7)
         .then(movies => {
           return Show.find()
-            .limit(12)
+            .limit(6)
             .then(shows => {
               return Promise.resolve({ movies, shows })
             })
         })
         .then(({ movies, shows }) => {
-          const random = _.random(0, movies.length - 1)
-
           reply.view(
             'index',
             {
-              background: '/images/covers/a-monster-calls-poster.jpg',
-              movies,
+              movie: _.first(movies), // gets a random movie
+              movies: _.slice(movies, 1),
               shows
             },
             { layout: 'hero' }
@@ -77,9 +74,7 @@ const Handler = {
       const accept = request.headers.accept
 
       if (accept && accept.match(/json/)) {
-        return reply(
-          Boom.notFound('Fuckity fuck, this resource isn’t available.')
-        )
+        return reply(Boom.notFound('Fuckity fuck, this resource isn’t available.'))
       }
 
       reply.view('404').code(404)

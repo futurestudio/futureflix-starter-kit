@@ -19,6 +19,10 @@ const showSchema = new Schema({
     fanart: Number,
     tvrage: Number
   },
+  images: {
+    poster: String,
+    background: String
+  },
   overview: String,
   trailer: String,
   homepage: String,
@@ -34,7 +38,7 @@ const showSchema = new Schema({
   rating: Number,
   votes: Number,
   runtime: Number,
-  genres: [ String ],
+  genres: [String],
   language: String,
   certification: String,
   network: String,

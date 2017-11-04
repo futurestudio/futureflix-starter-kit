@@ -1,7 +1,3 @@
-{{#movie}}
-
-<!-- Hero content: will be in the middle -->
-
 <style>
     .hero-bg {
         position: absolute;
@@ -30,40 +26,11 @@
     }
 </style>
 
+{{#movie}}
 <section class="hero is-dark is-bold is-medium">
-    <div class="hero-bg" style="background-image: url({{images.background}});"></div>
-    <div class="shadow"></div>
 
-    <!-- Hero header: will stick at the top -->
-    <div class="hero-head">
-        {{> hero-header}}
-    </div>
+    {{> movies/hero }}
 
-    <div class="hero-body">
-        <div class="container">
-            <div class="column is-half">
-                <h1 class="title">
-                    {{title}}
-                </h1>
-                <h2 class="subtitle has-text-grey-lighter">
-                    {{tagline}}
-                </h2>
-                <p class="has-text-grey">
-                    {{year}} &bull; <span class="certification">{{certification}}</span> &bull; {{formatRuntime runtime}}
-                </p>
-                <p class="has-text-grey-lighter has-margin-top-1">
-                    {{overview}}
-                </p>
-                <p class="field">
-                    <a class="button add-to-watchlist has-margin-top-1">
-                        <span class="icon">
-                            <img src="/images/plus.svg" alt="Add to Watchlist">
-                        </span>
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
 </section>
 
 <div class="content container">
@@ -73,7 +40,8 @@
 
             <h2>Genres</h2>
             <div class="tags">
-                {{#each genres}} <span class="tag is-warning">{{this}}</span> {{/each}}
+                {{#each genres}}
+                <span class="tag is-warning">{{this}}</span> {{/each}}
             </div>
         </div>
 

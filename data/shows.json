@@ -10,7 +10,8 @@
       "tmdb": 1399,
       "tvrage": 24493
     },
-    "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and the icy horrors beyond.",
+    "overview":
+      "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and the icy horrors beyond.",
     "first_aired": "2011-04-18T01:00:00.000Z",
     "airs": {
       "day": "Sunday",
@@ -66,14 +67,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "fantasy",
-      "science-fiction",
-      "action",
-      "adventure"
-    ],
-    "aired_episodes": 67
+    "genres": ["drama", "fantasy", "science-fiction", "action", "adventure"],
+    "aired_episodes": 67,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/121361/tvposter/game-of-thrones-521441fd9b45b.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/121361/showbackground/game-of-thrones-4fd5fa8ed5e1b.jpg"
+    }
   },
   {
     "title": "Breaking Bad",
@@ -86,7 +85,8 @@
       "tmdb": 1396,
       "tvrage": 18164
     },
-    "overview": "Walter White, a struggling high school chemistry teacher, is diagnosed with advanced lung cancer. He turns to a life of crime, producing and selling methamphetamine accompanied by a former student, Jesse Pinkman, with the aim of securing his family's financial future before he dies.",
+    "overview":
+      "Walter White, a struggling high school chemistry teacher, is diagnosed with advanced lung cancer. He turns to a life of crime, producing and selling methamphetamine accompanied by a former student, Jesse Pinkman, with the aim of securing his family's financial future before he dies.",
     "first_aired": "2008-01-20T02:00:00.000Z",
     "airs": {
       "day": "Sunday",
@@ -139,10 +139,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama"
-    ],
-    "aired_episodes": 62
+    "genres": ["drama"],
+    "aired_episodes": 62,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/81189/tvposter/breaking-bad-5427fc5ebded7.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/81189/showbackground/breaking-bad-4fcb7b24428ba.jpg"
+    }
   },
   {
     "title": "The Walking Dead",
@@ -155,7 +157,8 @@
       "tmdb": 1402,
       "tvrage": 25056
     },
-    "overview": "The world we knew is gone. An epidemic of apocalyptic proportions has swept the globe causing the dead to rise and feed on the living. In a matter of months society has crumbled. In a world ruled by the dead, we are forced to finally start living. Based on a comic book series of the same name by Robert Kirkman, this AMC project focuses on the world after a zombie apocalypse. The series follows a police officer, Rick Grimes, who wakes up from a coma to find the world ravaged with zombies. Looking for his family, he and a group of survivors attempt to battle against the zombies in order to stay alive.",
+    "overview":
+      "The world we knew is gone. An epidemic of apocalyptic proportions has swept the globe causing the dead to rise and feed on the living. In a matter of months society has crumbled. In a world ruled by the dead, we are forced to finally start living. Based on a comic book series of the same name by Robert Kirkman, this AMC project focuses on the world after a zombie apocalypse. The series follows a police officer, Rick Grimes, who wakes up from a coma to find the world ravaged with zombies. Looking for his family, he and a group of survivors attempt to battle against the zombies in order to stay alive.",
     "first_aired": "2010-10-31T05:00:00.000Z",
     "airs": {
       "day": "Sunday",
@@ -212,16 +215,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "action",
-      "adventure",
-      "fantasy",
-      "science-fiction",
-      "horror",
-      "suspense"
-    ],
-    "aired_episodes": 99
+    "genres": ["drama", "action", "adventure", "fantasy", "science-fiction", "horror", "suspense"],
+    "aired_episodes": 99,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/153021/tvposter/the-walking-dead-5212771f42d2f.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/153021/showbackground/the-walking-dead-4fd5f9c464280.jpg"
+    }
   },
   {
     "title": "The Big Bang Theory",
@@ -234,7 +233,8 @@
       "tmdb": 1418,
       "tvrage": 8511
     },
-    "overview": "What happens when hyperintelligent roommates Sheldon and Leonard meet Penny, a free-spirited beauty moving in next door, and realize they know next to nothing about life outside of the lab. Rounding out the crew are the smarmy Wolowitz, who thinks he's as sexy as he is brainy, and Koothrappali, who suffers from an inability to speak in the presence of a woman.",
+    "overview":
+      "What happens when hyperintelligent roommates Sheldon and Leonard meet Penny, a free-spirited beauty moving in next door, and realize they know next to nothing about life outside of the lab. Rounding out the crew are the smarmy Wolowitz, who thinks he's as sexy as he is brainy, and Koothrappali, who suffers from an inability to speak in the presence of a woman.",
     "first_aired": "2007-09-24T00:00:00.000Z",
     "airs": {
       "day": "Monday",
@@ -292,10 +292,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "comedy"
-    ],
-    "aired_episodes": 231
+    "genres": ["comedy"],
+    "aired_episodes": 231,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/80379/tvposter/the-big-bang-theory-5214251a59ba0.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/80379/showbackground/the-big-bang-theory-561e3c3dbc1ea.jpg"
+    }
   },
   {
     "title": "Sherlock",
@@ -308,7 +310,8 @@
       "tmdb": 19885,
       "tvrage": 23433
     },
-    "overview": "Sherlock Holmes and Dr John Watson's adventures in 21st Century London. A thrilling, funny, fast-paced contemporary reimagining of the Arthur Conan Doyle classic",
+    "overview":
+      "Sherlock Holmes and Dr John Watson's adventures in 21st Century London. A thrilling, funny, fast-paced contemporary reimagining of the Arthur Conan Doyle classic",
     "first_aired": "2010-07-25T00:00:00.000Z",
     "airs": {
       "day": "Sunday",
@@ -359,12 +362,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "crime",
-      "mystery"
-    ],
-    "aired_episodes": 12
+    "genres": ["drama", "crime", "mystery"],
+    "aired_episodes": 12,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/176941/tvposter/sherlock-52b60767a30c9.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/176941/showbackground/sherlock-5027c48a88d02.jpg"
+    }
   },
   {
     "title": "Dexter",
@@ -377,7 +380,8 @@
       "tmdb": 1405,
       "tvrage": null
     },
-    "overview": "He's smart, he's good looking, and he's got a great sense of humor. He's Dexter Morgan, everyone's favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, & nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself.",
+    "overview":
+      "He's smart, he's good looking, and he's got a great sense of humor. He's Dexter Morgan, everyone's favorite serial killer. As a Miami forensics expert, he spends his days solving crimes, & nights committing them. But Dexter lives by a strict code of honor that is both his saving grace and lifelong burden. Torn between his deadly compulsion and his desire for true happiness, Dexter is a man in profound conflict with the world and himself.",
     "first_aired": "2006-10-01T00:00:00.000Z",
     "airs": {
       "day": null,
@@ -424,12 +428,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "mystery",
-      "crime"
-    ],
-    "aired_episodes": 96
+    "genres": ["drama", "mystery", "crime"],
+    "aired_episodes": 96,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/79349/tvposter/dexter-5251f81d6a966.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/79349/showbackground/dexter-4fc683691dea7.jpg"
+    }
   },
   {
     "title": "How I Met Your Mother",
@@ -442,7 +446,8 @@
       "tmdb": 1100,
       "tvrage": 3918
     },
-    "overview": "The year is 2030. Ted Mosby is relaying the story of how he met his wife to his daughter and son. The story starts in the year 2005, when then twenty-seven year old architect Ted was spurred on to want to get married after his best friends from his college days at Wesleyan, lawyer Marshall Eriksen, who was his roommate at the time and kindergarten teacher Lily Aldrin, got engaged after nine years of dating each other. Ted's new quest in life was much to the dismay of his womanizing friend, Barney Stinson. But soon after Marshall and Lily's engagement, Ted believed that his life mate was going to be news reporter and aspiring news anchor Robin Scherbatsky, who, despite having had a romantic relationship with her after this time, ended up being who the kids know as their \"Aunt\" Robin. As Ted relays the story to his kids, the constants are that their Uncle Marshall, Aunt Lily, Uncle Barney and Aunt Robin are always in the picture and thus have something to do with how he got together with their mother.",
+    "overview":
+      "The year is 2030. Ted Mosby is relaying the story of how he met his wife to his daughter and son. The story starts in the year 2005, when then twenty-seven year old architect Ted was spurred on to want to get married after his best friends from his college days at Wesleyan, lawyer Marshall Eriksen, who was his roommate at the time and kindergarten teacher Lily Aldrin, got engaged after nine years of dating each other. Ted's new quest in life was much to the dismay of his womanizing friend, Barney Stinson. But soon after Marshall and Lily's engagement, Ted believed that his life mate was going to be news reporter and aspiring news anchor Robin Scherbatsky, who, despite having had a romantic relationship with her after this time, ended up being who the kids know as their \"Aunt\" Robin. As Ted relays the story to his kids, the constants are that their Uncle Marshall, Aunt Lily, Uncle Barney and Aunt Robin are always in the picture and thus have something to do with how he got together with their mother.",
     "first_aired": "2005-09-20T00:00:00.000Z",
     "airs": {
       "day": "Monday",
@@ -488,10 +493,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "comedy"
-    ],
-    "aired_episodes": 208
+    "genres": ["comedy"],
+    "aired_episodes": 208,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/75760/tvposter/how-i-met-your-mother-521bcbf47976e.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/75760/showbackground/how-i-met-your-mother-585ad1319c2be.jpg"
+    }
   },
   {
     "title": "Arrow",
@@ -504,7 +511,8 @@
       "tmdb": 1412,
       "tvrage": 30715
     },
-    "overview": "Oliver Queen and his father are lost at sea when their luxury yacht sinks. His father doesn't survive. Oliver survives on an uncharted island for five years learning to fight, but also learning about his father's corruption and unscrupulous business dealings. He returns to civilization a changed man, determined to put things right. He disguises himself with the hood of one of his mysterious island mentors, arms himself with a bow and sets about hunting down the men and women who have corrupted his city.",
+    "overview":
+      "Oliver Queen and his father are lost at sea when their luxury yacht sinks. His father doesn't survive. Oliver survives on an uncharted island for five years learning to fight, but also learning about his father's corruption and unscrupulous business dealings. He returns to civilization a changed man, determined to put things right. He disguises himself with the hood of one of his mysterious island mentors, arms himself with a bow and sets about hunting down the men and women who have corrupted his city.",
     "first_aired": "2012-10-11T01:00:00.000Z",
     "airs": {
       "day": "Thursday",
@@ -558,16 +566,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "mystery",
-      "action",
-      "adventure",
-      "crime",
-      "science-fiction",
-      "superhero"
-    ],
-    "aired_episodes": 115
+    "genres": ["drama", "mystery", "action", "adventure", "crime", "science-fiction", "superhero"],
+    "aired_episodes": 115,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/257655/tvposter/arrow-54b187dc9a69c.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/257655/showbackground/arrow-50a7411f52835.jpg"
+    }
   },
   {
     "title": "Friends",
@@ -580,7 +584,8 @@
       "tmdb": 1668,
       "tvrage": 3616
     },
-    "overview": "Rachel Green, Ross Geller, Monica Geller, Joey Tribbiani, Chandler Bing and Phoebe Buffay are all friends, living off of one another in the heart of New York City. Over the course of ten years, this average group of buddies goes through massive mayhem, family trouble, past and future romances, fights, laughs, tears and surprises as they learn what it really means to be a friend.",
+    "overview":
+      "Rachel Green, Ross Geller, Monica Geller, Joey Tribbiani, Chandler Bing and Phoebe Buffay are all friends, living off of one another in the heart of New York City. Over the course of ten years, this average group of buddies goes through massive mayhem, family trouble, past and future romances, fights, laughs, tears and surprises as they learn what it really means to be a friend.",
     "first_aired": "1994-09-23T00:00:00.000Z",
     "airs": {
       "day": "Thursday",
@@ -628,11 +633,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "comedy",
-      "romance"
-    ],
-    "aired_episodes": 236
+    "genres": ["comedy", "romance"],
+    "aired_episodes": 236,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/79168/tvposter/friends-522501392b273.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/79168/showbackground/friends-50f2c92ec628d.jpg"
+    }
   },
   {
     "title": "Lost",
@@ -645,7 +651,8 @@
       "tmdb": 4607,
       "tvrage": 4284
     },
-    "overview": "After their plane, Oceanic Air flight 815, tore apart whilst thousands of miles off course, the survivors find themselves on a mysterious deserted island where they soon find out they are not alone.",
+    "overview":
+      "After their plane, Oceanic Air flight 815, tore apart whilst thousands of miles off course, the survivors find themselves on a mysterious deserted island where they soon find out they are not alone.",
     "first_aired": "2004-09-23T01:00:00.000Z",
     "airs": {
       "day": "Tuesday",
@@ -693,13 +700,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "mystery",
-      "adventure",
-      "action"
-    ],
-    "aired_episodes": 120
+    "genres": ["drama", "mystery", "adventure", "action"],
+    "aired_episodes": 120,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/73739/tvposter/lost-5224fbe21f91f.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/73739/showbackground/lost-500995e90d674.jpg"
+    }
   },
   {
     "title": "Homeland",
@@ -712,7 +718,8 @@
       "tmdb": 1407,
       "tvrage": 27811
     },
-    "overview": "When Marine Nicolas Brody is hailed as a hero after he returns home from eight years of captivity in Iraq, intelligence officer Carrie Mathison is the only one who suspects that he may have been turned.",
+    "overview":
+      "When Marine Nicolas Brody is hailed as a hero after he returns home from eight years of captivity in Iraq, intelligence officer Carrie Mathison is the only one who suspects that he may have been turned.",
     "first_aired": "2011-10-03T01:00:00.000Z",
     "airs": {
       "day": "Sunday",
@@ -761,11 +768,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "mystery"
-    ],
-    "aired_episodes": 72
+    "genres": ["drama", "mystery"],
+    "aired_episodes": 72,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/247897/tvposter/homeland-52d53abdee218.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/247897/showbackground/homeland-54bcc4a2ee990.jpg"
+    }
   },
   {
     "title": "House",
@@ -778,7 +786,8 @@
       "tmdb": 1408,
       "tvrage": 3908
     },
-    "overview": "Go deeper into the medical mysteries of House, TV's most compelling drama. Hugh Laurie stars as the brilliant but sarcastic Dr. Gregory House, a maverick physician who is devoid of bedside manner. While his behavior can border on antisocial, Dr. House thrives on the challenge of solving the medical puzzles that other doctors give up on. Together with his hand-picked team of young medical experts, he'll do whatever it takes in the race against the clock to solve the case.",
+    "overview":
+      "Go deeper into the medical mysteries of House, TV's most compelling drama. Hugh Laurie stars as the brilliant but sarcastic Dr. Gregory House, a maverick physician who is devoid of bedside manner. While his behavior can border on antisocial, Dr. House thrives on the challenge of solving the medical puzzles that other doctors give up on. Together with his hand-picked team of young medical experts, he'll do whatever it takes in the race against the clock to solve the case.",
     "first_aired": "2004-11-16T00:00:00.000Z",
     "airs": {
       "day": null,
@@ -826,12 +835,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "comedy",
-      "drama",
-      "mystery"
-    ],
-    "aired_episodes": 176
+    "genres": ["comedy", "drama", "mystery"],
+    "aired_episodes": 176,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/73255/tvposter/house-52ea77190d76c.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/73255/showbackground/house-52d53cc062758.jpg"
+    }
   },
   {
     "title": "House of Cards",
@@ -844,7 +853,8 @@
       "tmdb": 1425,
       "tvrage": 27822
     },
-    "overview": "Ruthless and cunning, Congressman Francis Underwood and his wife Claire stop at nothing to conquer everything. This wicked political drama penetrates the shadowy world of greed, sex and corruption in modern D.C.",
+    "overview":
+      "Ruthless and cunning, Congressman Francis Underwood and his wife Claire stop at nothing to conquer everything. This wicked political drama penetrates the shadowy world of greed, sex and corruption in modern D.C.",
     "first_aired": "2013-02-01T00:00:00.000Z",
     "airs": {
       "day": "Friday",
@@ -888,11 +898,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "crime"
-    ],
-    "aired_episodes": 65
+    "genres": ["drama", "crime"],
+    "aired_episodes": 65,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/262980/tvposter/house-of-cards-2013-52cf036e44ebc.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/262980/showbackground/house-of-cards-2013-53f257cb9a361.jpg"
+    }
   },
   {
     "title": "Fringe",
@@ -905,7 +916,8 @@
       "tmdb": 1705,
       "tvrage": 18388
     },
-    "overview": "The series follows a Federal Bureau of Investigation \"Fringe Division\" team based in Boston. The team uses unorthodox \"fringe\" science and FBI investigative techniques to investigate a series of unexplained, often ghastly occurrences, some of which are related to mysteries surrounding a parallel universe.",
+    "overview":
+      "The series follows a Federal Bureau of Investigation \"Fringe Division\" team based in Boston. The team uses unorthodox \"fringe\" science and FBI investigative techniques to investigate a series of unexplained, often ghastly occurrences, some of which are related to mysteries surrounding a parallel universe.",
     "first_aired": "2008-08-26T00:00:00.000Z",
     "airs": {
       "day": "Friday",
@@ -948,15 +960,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "mystery",
-      "fantasy",
-      "science-fiction",
-      "crime",
-      "thriller"
-    ],
-    "aired_episodes": 100
+    "genres": ["drama", "mystery", "fantasy", "science-fiction", "crime", "thriller"],
+    "aired_episodes": 100,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/82066/tvposter/fringe-521275f45d70d.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/82066/showbackground/fringe-4fcc044d98d8f.jpg"
+    }
   },
   {
     "title": "Suits",
@@ -969,7 +978,8 @@
       "tmdb": 37680,
       "tvrage": 27518
     },
-    "overview": "Suits follows college drop-out Mike Ross, who accidentally lands a job with one of New York's best legal closers, Harvey Specter. They soon become a winning team with Mike's raw talent and photographic memory, and Mike soon reminds Harvey of why he went into the field of law in the first place.",
+    "overview":
+      "Suits follows college drop-out Mike Ross, who accidentally lands a job with one of New York's best legal closers, Harvey Specter. They soon become a winning team with Mike's raw talent and photographic memory, and Mike soon reminds Harvey of why he went into the field of law in the first place.",
     "first_aired": "2011-06-24T01:00:00.000Z",
     "airs": {
       "day": "Wednesday",
@@ -1018,10 +1028,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama"
-    ],
-    "aired_episodes": 102
+    "genres": ["drama"],
+    "aired_episodes": 102,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/247808/tvposter/suits-52b60286a3ee1.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/247808/showbackground/suits-55307248485cb.jpg"
+    }
   },
   {
     "title": "Supernatural",
@@ -1034,7 +1046,8 @@
       "tmdb": 1622,
       "tvrage": 5410
     },
-    "overview": "Two brothers follow their father's footsteps as \"hunters\" fighting evil supernatural beings of many kinds including monsters, demons, and gods that roam the earth.",
+    "overview":
+      "Two brothers follow their father's footsteps as \"hunters\" fighting evil supernatural beings of many kinds including monsters, demons, and gods that roam the earth.",
     "first_aired": "2005-09-14T00:00:00.000Z",
     "airs": {
       "day": "Thursday",
@@ -1085,16 +1098,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "mystery",
-      "fantasy",
-      "science-fiction",
-      "crime",
-      "horror",
-      "suspense"
-    ],
-    "aired_episodes": 264
+    "genres": ["drama", "mystery", "fantasy", "science-fiction", "crime", "horror", "suspense"],
+    "aired_episodes": 264,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/78901/tvposter/supernatural-529331966cdf0.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/78901/showbackground/supernatural-50764e462737e.jpg"
+    }
   },
   {
     "title": "Modern Family",
@@ -1107,7 +1116,8 @@
       "tmdb": 1421,
       "tvrage": 22622
     },
-    "overview": "This mockumentary explores the many different types of a modern family through the stories of a gay couple, comprised of Mitchell and Cameron, and their daughter Lily, a straight couple, comprised of Phil and Claire, and their three kids, Haley, Alex, and Luke, and a multi-ethnic couple, which is comprised of Jay and Gloria, and her son Manny.",
+    "overview":
+      "This mockumentary explores the many different types of a modern family through the stories of a gay couple, comprised of Mitchell and Cameron, and their daughter Lily, a straight couple, comprised of Phil and Claire, and their three kids, Haley, Alex, and Luke, and a multi-ethnic couple, which is comprised of Jay and Gloria, and her son Manny.",
     "first_aired": "2009-09-24T01:00:00.000Z",
     "airs": {
       "day": "Wednesday",
@@ -1156,10 +1166,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "comedy"
-    ],
-    "aired_episodes": 188
+    "genres": ["comedy"],
+    "aired_episodes": 188,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/95011/tvposter/modern-family-52da194760e77.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/95011/showbackground/modern-family-541a2417670b2.jpg"
+    }
   },
   {
     "title": "Orange Is the New Black",
@@ -1172,7 +1184,8 @@
       "tmdb": 1424,
       "tvrage": 32950
     },
-    "overview": "Piper Chapman is a public relations executive with a career and a fiance when her past suddenly catches up to her. In her mid-30s she is sentenced to spend time in a minimum-security women's prison in Connecticut for her association with a drug runner 10 years earlier. This Netflix original series is based on the book of the same title. Forced to trade power suits for prison orange, Chapman makes her way through the corrections system and adjusts to life behind bars, making friends with the many eccentric, unusual and unexpected people she meets.",
+    "overview":
+      "Piper Chapman is a public relations executive with a career and a fiance when her past suddenly catches up to her. In her mid-30s she is sentenced to spend time in a minimum-security women's prison in Connecticut for her association with a drug runner 10 years earlier. This Netflix original series is based on the book of the same title. Forced to trade power suits for prison orange, Chapman makes her way through the corrections system and adjusts to life behind bars, making friends with the many eccentric, unusual and unexpected people she meets.",
     "first_aired": "2013-07-11T04:00:00.000Z",
     "airs": {
       "day": "Friday",
@@ -1215,11 +1228,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "comedy",
-      "drama"
-    ],
-    "aired_episodes": 65
+    "genres": ["comedy", "drama"],
+    "aired_episodes": 65,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/264586/tvposter/orange-is-the-new-black-5352b8c73eac7.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/264586/showbackground/orange-is-the-new-black-5426c4f0df839.jpg"
+    }
   },
   {
     "title": "Doctor Who",
@@ -1232,7 +1246,8 @@
       "tmdb": 57243,
       "tvrage": 3332
     },
-    "overview": "The Doctor is an alien Time Lord from the planet Gallifrey who travels through all of time and space in his TARDIS. Having no gender, the Doctor has a long list of friends and companions who have shared journeys along the way. Instead of dying, the Doctor is able to \"regenerate\" into a new body, taking on a new personality with each regeneration.",
+    "overview":
+      "The Doctor is an alien Time Lord from the planet Gallifrey who travels through all of time and space in his TARDIS. Having no gender, the Doctor has a long list of friends and companions who have shared journeys along the way. Instead of dying, the Doctor is able to \"regenerate\" into a new body, taking on a new personality with each regeneration.",
     "first_aired": "2005-03-26T18:45:00.000Z",
     "airs": {
       "day": "Saturday",
@@ -1283,14 +1298,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "action",
-      "adventure",
-      "science-fiction",
-      "fantasy"
-    ],
-    "aired_episodes": 127
+    "genres": ["drama", "action", "adventure", "science-fiction", "fantasy"],
+    "aired_episodes": 127,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/78804/tvposter/doctor-who-2005-52ea4e9dc8827.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/78804/showbackground/doctor-who-2005-5452df69ea962.jpg"
+    }
   },
   {
     "title": "The Flash",
@@ -1303,7 +1316,8 @@
       "tmdb": 60735,
       "tvrage": 36939
     },
-    "overview": "Barry Allen wakes up nine months after he was struck by lightning and discovers that the bolt gave him the power of super speed. With his new team and powers, Barry becomes \"The Flash\" and fights crime in Central City.",
+    "overview":
+      "Barry Allen wakes up nine months after he was struck by lightning and discovers that the bolt gave him the power of super speed. With his new team and powers, Barry becomes \"The Flash\" and fights crime in Central City.",
     "first_aired": "2014-10-08T00:00:00.000Z",
     "airs": {
       "day": "Tuesday",
@@ -1359,13 +1373,12 @@
       "za",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "fantasy",
-      "science-fiction",
-      "superhero"
-    ],
-    "aired_episodes": 69
+    "genres": ["drama", "fantasy", "science-fiction", "superhero"],
+    "aired_episodes": 69,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/279121/tvposter/the-flash-2014-54830aed88b75.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/279121/showbackground/the-flash-2014-549134f3dec94.jpg"
+    }
   },
   {
     "title": "The Simpsons",
@@ -1378,7 +1391,8 @@
       "tmdb": 456,
       "tvrage": 6190
     },
-    "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
+    "overview":
+      "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
     "first_aired": "1989-12-18T01:00:00.000Z",
     "airs": {
       "day": "Sunday",
@@ -1431,12 +1445,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "animation",
-      "comedy",
-      "family"
-    ],
-    "aired_episodes": 618
+    "genres": ["animation", "comedy", "family"],
+    "aired_episodes": 618,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/71663/tvposter/the-simpsons-536fc64117634.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/71663/showbackground/the-simpsons-505f34dee3d36.jpg"
+    }
   },
   {
     "title": "Marvel's Agents of S.H.I.E.L.D.",
@@ -1500,15 +1514,13 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "action",
-      "adventure",
-      "drama",
-      "fantasy",
-      "science-fiction",
-      "suspense"
-    ],
-    "aired_episodes": 88
+    "genres": ["action", "adventure", "drama", "fantasy", "science-fiction", "suspense"],
+    "aired_episodes": 88,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/263365/tvposter/marvels-agents-of-shield-523d1c0904f83.jpg",
+      "background":
+        "https://assets.fanart.tv/fanart/tv/263365/showbackground/marvels-agents-of-shield-54551c1772c25.jpg"
+    }
   },
   {
     "title": "True Detective",
@@ -1521,7 +1533,8 @@
       "tmdb": 46648,
       "tvrage": 31369
     },
-    "overview": "An anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.",
+    "overview":
+      "An anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.",
     "first_aired": "2014-01-13T02:00:00.000Z",
     "airs": {
       "day": "Sunday",
@@ -1569,10 +1582,12 @@
       "vi",
       "zh"
     ],
-    "genres": [
-      "drama"
-    ],
-    "aired_episodes": 16
+    "genres": ["drama"],
+    "aired_episodes": 16,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/270633/tvposter/true-detective-52c3ace03064c.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/270633/showbackground/true-detective-52cde8f547e46.jpg"
+    }
   },
   {
     "title": "Vikings",
@@ -1585,7 +1600,8 @@
       "tmdb": 44217,
       "tvrage": 31136
     },
-    "overview": "Vikings follows the adventures of Ragnar Lothbrok the greatest hero of his age. The series tells the sagas of Ragnar's band of Viking brothers and his family, as he rises to become King of the Viking tribes. As well as being a fearless warrior, Ragnar embodies the Norse traditions of devotion to the gods, legend has it that he was a direct descendant of Odin, the god of war and warriors.",
+    "overview":
+      "Vikings follows the adventures of Ragnar Lothbrok the greatest hero of his age. The series tells the sagas of Ragnar's band of Viking brothers and his family, as he rises to become King of the Viking tribes. As well as being a fearless warrior, Ragnar embodies the Norse traditions of devotion to the gods, legend has it that he was a direct descendant of Odin, the god of war and warriors.",
     "first_aired": "2013-03-04T02:00:00.000Z",
     "airs": {
       "day": "Wednesday",
@@ -1636,12 +1652,12 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "action",
-      "adventure"
-    ],
-    "aired_episodes": 49
+    "genres": ["drama", "action", "adventure"],
+    "aired_episodes": 49,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/260449/tvposter/vikings-551f63e8bcc0d.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/260449/showbackground/vikings-54d960d0cdad3.jpg"
+    }
   },
   {
     "title": "American Horror Story",
@@ -1654,7 +1670,8 @@
       "tmdb": 1413,
       "tvrage": 28776
     },
-    "overview": "An anthology series centering on different characters and locations, including a house with a murderous past, an asylum, a witch coven, a freak show, a hotel, a farmhouse in Roanoke and a cult.",
+    "overview":
+      "An anthology series centering on different characters and locations, including a house with a murderous past, an asylum, a witch coven, a freak show, a hotel, a farmhouse in Roanoke and a cult.",
     "first_aired": "2011-10-05T00:00:00.000Z",
     "airs": {
       "day": "Tuesday",
@@ -1702,12 +1719,11 @@
       "uk",
       "zh"
     ],
-    "genres": [
-      "drama",
-      "mystery",
-      "horror",
-      "thriller"
-    ],
-    "aired_episodes": 75
+    "genres": ["drama", "mystery", "horror", "thriller"],
+    "aired_episodes": 75,
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/tv/250487/tvposter/american-horror-story-52ad0ab9f3519.jpg",
+      "background": "https://assets.fanart.tv/fanart/tv/250487/showbackground/american-horror-story-525c2427ed7b8.jpg"
+    }
   }
 ]

@@ -9,8 +9,8 @@
       "tmdb": 258230
     },
     "images": {
-      "poster": "https://walter.trakt.tv/images/movies/000/157/811/posters/thumb/f9d2cb3bba.jpg.webp",
-      "background": "/images/covers/a-monster-calls-poster.jpg"
+      "poster": "https://assets.fanart.tv/fanart/movies/258230/movieposter/a-monster-calls-587a54ecadfe0.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/258230/moviebackground/a-monster-calls-588f8bee800a8.jpg"
     },
     "tagline": "Stories are wild creatures.",
     "overview": "A boy imagines a monster that helps him deal with his difficult life and see the world in a different way.",
@@ -37,8 +37,8 @@
       "tmdb": 293660
     },
     "images": {
-      "poster": "https://walter.trakt.tv/images/movies/000/190/430/posters/thumb/9a8494f868.jpg.webp",
-      "background": "https://image.tmdb.org/t/p/w1066_and_h600_bestv2/n1y094tVDFATSzkTnFxoGZ1qNsG.jpg"
+      "poster": "https://assets.fanart.tv/fanart/movies/293660/movieposter/deadpool-5676cd1476dcf.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/293660/moviebackground/deadpool-563c1467e8ed8.jpg"
     },
     "tagline": "Witness the beginning of a happy ending",
     "overview": "Deadpool tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.",
@@ -112,8 +112,8 @@
       "tmdb": 118340
     },
     "images": {
-      "poster": "https://walter.trakt.tv/images/movies/000/082/405/posters/thumb/fb800608fa.jpg.webp",
-      "background": "https://walter.trakt.tv/images/movies/000/082/405/fanarts/full/d2e37f8511.jpg"
+      "poster": "https://assets.fanart.tv/fanart/movies/118340/movieposter/guardians-of-the-galaxy-537f5f8d0211a.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/118340/moviebackground/guardians-of-the-galaxy-53a6bbc1b3fa1.jpg"
     },
     "tagline": "All heroes start somewhere.",
     "overview": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
@@ -178,8 +178,8 @@
       "tmdb": 155
     },
     "images": {
-      "poster": "https://walter.trakt.tv/images/movies/000/000/120/posters/thumb/8369bf0d4a.jpg.webp",
-      "background": "https://fanart.tv/fanart/movies/155/moviebackground/the-dark-knight-51f269c2ce53a.jpg"
+      "poster": "https://assets.fanart.tv/fanart/movies/155/movieposter/the-dark-knight-5225e1dfa5059.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/155/moviebackground/the-dark-knight-51f269c2ce53a.jpg"
     },
     "tagline": "Why So Serious?",
     "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.",
@@ -295,7 +295,11 @@
       "science-fiction",
       "thriller"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/27205/movieposter/inception-52df821bd2a9f.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/27205/moviebackground/inception-52eb41b2ab30f.jpg"
+    }
   },
   {
     "title": "Logan",
@@ -358,7 +362,11 @@
       "drama",
       "superhero"
     ],
-    "certification": "R"
+    "certification": "R",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/263115/movieposter/untitled-wolverine-sequel-57f7873b03ebd.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/263115/moviebackground/logan-5855a684c86a0.jpg"
+    }
   },
   {
     "title": "Doctor Strange",
@@ -421,7 +429,11 @@
       "fantasy",
       "superhero"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/284052/movieposter/doctor-strange-573b79ba14c4e.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/284052/moviebackground/doctor-strange-580e274f2c3f9.jpg"
+    }
   },
   {
     "title": "The Avengers",
@@ -482,7 +494,11 @@
       "science-fiction",
       "superhero"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/24428/movieposter/marvels-the-avengers-5218f1301e057.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/24428/moviebackground/marvels-the-avengers-504925d6dca45.jpg"
+    }
   },
   {
     "title": "Suicide Squad",
@@ -548,7 +564,11 @@
       "superhero",
       "adventure"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/297761/movieposter/suicide-squad-57704d2d2666e.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/297761/moviebackground/suicide-squad-56d4c22f0a7c4.jpg"
+    }
   },
   {
     "title": "Arrival",
@@ -611,7 +631,11 @@
       "thriller",
       "mystery"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/329865/movieposter/arrival-580d141c4b7e7.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/329865/moviebackground/arrival-58013f9041565.jpg"
+    }
   },
   {
     "title": "Interstellar",
@@ -680,7 +704,11 @@
       "drama",
       "adventure"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/157336/movieposter/interstellar-550825f7cc108.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/157336/moviebackground/interstellar-544bb9af46801.jpg"
+    }
   },
   {
     "title": "The Matrix",
@@ -739,7 +767,11 @@
       "action",
       "science-fiction"
     ],
-    "certification": "R"
+    "certification": "R",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/603/movieposter/the-matrix-53b1a283180a1.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/603/moviebackground/the-matrix-553be0c3bdeeb.jpg"
+    }
   },
   {
     "title": "Star Wars: The Force Awakens",
@@ -804,7 +836,11 @@
       "fantasy",
       "science-fiction"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/140607/movieposter/star-wars-episode-vii-562497be87e4d.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/140607/moviebackground/star-wars-episode-vii-562406c2623aa.jpg"
+    }
   },
   {
     "title": "Captain America: Civil War",
@@ -870,7 +906,11 @@
       "adventure",
       "superhero"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/271110/movieposter/captain-america-3-civil-war-56f18cd5caabb.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/271110/moviebackground/captain-america-3-civil-war-56f2e0870254b.jpg"
+    }
   },
   {
     "title": "Moana",
@@ -933,7 +973,11 @@
       "family",
       "adventure"
     ],
-    "certification": "PG"
+    "certification": "PG",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/277834/movieposter/moana-58545434f36c8.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/277834/moviebackground/moana-57f34703ec6ef.jpg"
+    }
   },
   {
     "title": "Passengers",
@@ -994,7 +1038,11 @@
       "drama",
       "adventure"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/274870/movieposter/passengers-5853b5db66334.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/274870/moviebackground/passengers-5855a3d4107f8.jpg"
+    }
   },
   {
     "title": "Avatar",
@@ -1061,7 +1109,11 @@
       "fantasy",
       "science-fiction"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/19995/movieposter/avatar-52eed5d1081ae.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/19995/moviebackground/avatar-4fec1d99872da.jpg"
+    }
   },
   {
     "title": "Frozen",
@@ -1123,7 +1175,11 @@
       "animation",
       "family"
     ],
-    "certification": "PG"
+    "certification": "PG",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/109445/movieposter/frozen-529e2be480302.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/109445/moviebackground/frozen-53b2ec300b58d.jpg"
+    }
   },
   {
     "title": "The Martian",
@@ -1188,7 +1244,11 @@
       "adventure",
       "drama"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/286217/movieposter/the-martian-557f2cac36753.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/286217/moviebackground/the-martian-55e1812952cf9.jpg"
+    }
   },
   {
     "title": "Fight Club",
@@ -1252,7 +1312,11 @@
     "genres": [
       "drama"
     ],
-    "certification": "R"
+    "certification": "R",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/550/movieposter/fight-club-522a5477c7bd3.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/550/moviebackground/fight-club-59901d1c111c5.jpg"
+    }
   },
   {
     "title": "Zootopia",
@@ -1316,7 +1380,11 @@
       "comedy",
       "family"
     ],
-    "certification": "PG"
+    "certification": "PG",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/269149/movieposter/zootopia-573f3f2c6d6ee.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/269149/moviebackground/zootopia-56b0a4adcd559.jpg"
+    }
   },
   {
     "title": "Rogue One: A Star Wars Story",
@@ -1377,7 +1445,11 @@
       "adventure",
       "action"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/330459/movieposter/star-wars-rogue-one-57feb6347866a.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/330459/moviebackground/star-wars-rogue-one-58355b7f11ae0.jpg"
+    }
   },
   {
     "title": "Fantastic Beasts and Where to Find Them",
@@ -1441,7 +1513,11 @@
       "family",
       "adventure"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/259316/movieposter/fantastic-beasts-and-where-to-find-them-580dc0e244bdd.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/259316/moviebackground/fantastic-beasts-and-where-to-find-them-581a382cee292.jpg"
+    }
   },
   {
     "title": "Iron Man",
@@ -1501,7 +1577,11 @@
       "science-fiction",
       "superhero"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/1726/movieposter/iron-man-521da627ecf87.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/1726/moviebackground/iron-man-5229c0b742efd.jpg"
+    }
   },
   {
     "title": "Wonder Woman",
@@ -1560,7 +1640,11 @@
       "fantasy",
       "superhero"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/297762/movieposter/wonder-woman-591610f701edb.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/297762/moviebackground/wonder-woman-590c1b63b9a74.jpg"
+    }
   },
   {
     "title": "X-Men: Apocalypse",
@@ -1621,6 +1705,10 @@
       "science-fiction",
       "superhero"
     ],
-    "certification": "PG-13"
+    "certification": "PG-13",
+    "images": {
+      "poster": "https://assets.fanart.tv/fanart/movies/246655/movieposter/x-men-apocalypse-57152ebf602af.jpg",
+      "background": "https://assets.fanart.tv/fanart/movies/246655/moviebackground/x-men-apocalypse-571e08490ac6d.jpg"
+    }
   }
 ]

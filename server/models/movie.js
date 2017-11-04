@@ -1,6 +1,7 @@
 'use strict'
 
 const Mongoose = require('mongoose')
+const MongooseRandom = require('mongoose-simple-random')
 const Schema = Mongoose.Schema
 
 const movieSchema = new Schema({
@@ -22,11 +23,6 @@ const movieSchema = new Schema({
     poster: String,
     background: String
   },
-  poster: String,
-  banner: String,
-  fanart: String,
-  logo: String,
-  thumb: String,
   year: Number,
   tagline: String,
   overview: String,
@@ -36,9 +32,26 @@ const movieSchema = new Schema({
   homepage: String,
   rating: Number,
   votes: Number,
-  genres: [ String ],
+  genres: [String],
   language: String,
   certification: String
 })
+
+// add plugin to find random movies
+movieSchema.plugin(MongooseRandom)
+
+movieSchema.statics.random = function (limit) {
+  const self = this
+
+  return new Promise((resolve, reject) => {
+    self.findRandom({}, {}, { limit }, (err, results) => {
+      if (err) {
+        return reject(err)
+      }
+
+      return resolve(results)
+    })
+  })
+}
 
 module.exports = Mongoose.model('Movie', movieSchema)

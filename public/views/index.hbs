@@ -43,35 +43,13 @@
     }
 </style>
 
+{{#movie}}
 <section class="hero is-dark is-bold is-large">
 
-    {{!--
-    <div class="hero-bg" style="background-image: url('https://walter.trakt.tv/images/shows/000/060/278/fanarts/full/6cb6bd4982.jpg.webp');"></div>--}}
-    <div class="hero-bg" style="background-image: url('/images/covers/a-monster-calls-poster.jpg');"></div>
-    <div class="shadow"></div>
+    {{> movies/hero }}
 
-    <!-- Hero header: will stick at the top -->
-    <div class="hero-head">
-        {{> hero-header}}
-    </div>
-
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title">
-                Welcome to Futureflix!
-            </h1>
-            <h2 class="subtitle">
-                Make it rock.
-            </h2>
-        </div>
-    </div>
-
-    <!-- Hero footer: will stick at the bottom -->
-    <div class="hero-foot">
-
-    </div>
 </section>
+{{/movie}}
 
 
 <section class="section">
@@ -87,6 +65,27 @@
             {{#each movies}}
             <div class="column">
                 <a href="/movies/{{ids.slug}}">
+                    <img src="{{images.poster}}" width="">
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="columns content">
+            <div class="column">
+                <h2>Top TV Shows</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns content">
+            {{#each shows}}
+            <div class="column">
+                <a href="/shows/{{ids.slug}}">
                     <img src="{{images.poster}}" width="">
                 </a>
             </div>
