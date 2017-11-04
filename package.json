@@ -68,7 +68,6 @@
   "scripts": {
     "cleanup": "node ./data/load-sample-data.js --destroy",
     "pumpitup": "node ./data/load-sample-data.js",
-    "load": "node ./data/load-images.js",
     "test": "lab --assert code --leaks --coverage"
   }
 }
