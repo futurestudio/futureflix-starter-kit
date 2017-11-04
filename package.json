@@ -21,14 +21,19 @@
     }
   ],
   "dependencies": {
+    "axios": "~0.17.0",
     "boom": "~5.2.0",
+    "dotenv": "~4.0.0",
     "handlebars": "~4.0.11",
     "hapi": "~16.6.2",
     "hoek": "~4.2.0",
     "html-to-text": "~3.3.0",
     "inert": "~4.2.1",
     "joi": "~10.6.0",
+    "listr": "~0.12.0",
     "lodash": "~4.17.4",
+    "mongoose": "~4.10.8",
+    "mongoose-simple-random": "~0.4.1",
     "vision": "~4.1.1"
   },
   "devDependencies": {
@@ -55,11 +60,15 @@
     "tutorials"
   ],
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fs-opensource/futureflix-starter-kit.git"
   },
   "scripts": {
+    "cleanup": "node ./data/load-sample-data.js --destroy",
+    "pumpitup": "node ./data/load-sample-data.js",
+    "load": "node ./data/load-images.js",
     "test": "lab --assert code --leaks --coverage"
   }
 }

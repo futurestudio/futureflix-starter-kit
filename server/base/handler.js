@@ -1,6 +1,10 @@
 'use strict'
 
+const _ = require('lodash')
 const Boom = require('boom')
+const Path = require('path')
+const Movie = require(Path.resolve(__dirname, '..', 'models')).Movie
+const Show = require(Path.resolve(__dirname, '..', 'models')).Show
 
 const Handler = {
   index: {
@@ -10,7 +14,25 @@ const Handler = {
       }
     },
     handler: function (request, reply) {
-      reply.view('index', null, { layout: 'hero' })
+      Movie.random(7)
+        .then(movies => {
+          return Show.find()
+            .limit(6)
+            .then(shows => {
+              return Promise.resolve({ movies, shows })
+            })
+        })
+        .then(({ movies, shows }) => {
+          reply.view(
+            'index',
+            {
+              movie: _.first(movies), // gets a random movie
+              movies: _.slice(movies, 1),
+              shows
+            },
+            { layout: 'hero' }
+          )
+        })
     }
   },
 
