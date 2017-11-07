@@ -11,7 +11,9 @@
         <div class="columns">
             <div class="column is-half">
                 <h1 class="title">
-                    {{title}}
+                    <a href="/movies/{{ids.slug}}">
+                        {{title}}
+                    </a>
                 </h1>
                 <h2 class="subtitle has-text-grey-lighter">
                     {{tagline}}
@@ -25,9 +27,10 @@
                 </p>
                 <p class="field">
                     <a class="button add-to-watchlist has-margin-top-1">
-                        <span class="icon">
-                            <img src="/images/plus.svg" alt="Add to Watchlist">
+                        <span class="icon is-small has-text-primary">
+                            <i class="fa fa-plus"></i>
                         </span>
+                        <span class="has-text-white-ter">Add to Watchlist</span>
                     </a>
                 </p>
             </div>
