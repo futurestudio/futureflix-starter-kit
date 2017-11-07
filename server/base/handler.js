@@ -16,11 +16,9 @@ const Handler = {
     handler: function (request, reply) {
       Movie.random(7)
         .then(movies => {
-          return Show.find()
-            .limit(6)
-            .then(shows => {
-              return Promise.resolve({ movies, shows })
-            })
+          return Show.random(6).then(shows => {
+            return Promise.resolve({ movies, shows })
+          })
         })
         .then(({ movies, shows }) => {
           reply.view(
