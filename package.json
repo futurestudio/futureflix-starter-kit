@@ -1,7 +1,7 @@
 {
   "name": "futureflix",
   "description": "Netflix like streaming platform — Future Studio Sample App",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "author": "Future Studio <info@futurestud.io>",
   "bugs": {
     "url": "https://github.com/fs-opensource/futureflix-starter-kit/issues"
@@ -21,15 +21,19 @@
     }
   ],
   "dependencies": {
+    "axios": "~0.17.0",
     "boom": "~6.0.0",
     "handlebars": "~4.0.10",
-    "hapi": "~17.0.0-rc9",
+    "hapi": "~17.0.1",
     "hoek": "~5.0.1",
     "html-to-text": "~3.3.0",
     "inert": "~5.0.0-rc8",
     "joi": "~10.6.0",
+    "listr": "~0.12.0",
     "lodash": "~4.17.4",
-    "vision": "~5.0.0-rc8"
+    "mongoose": "~4.10.8",
+    "mongoose-simple-random": "~0.4.1",
+    "vision": "~5.1.0"
   },
   "devDependencies": {
     "code": "~4.1.0",
@@ -40,14 +44,20 @@
     "eslint-plugin-standard": "~3.0.1",
     "lab": "~14.3.1"
   },
+  "engines": {
+    "node": ">= 6.0"
+  },
   "homepage": "https://github.com/fs-opensource/futureflix-starter-kit",
   "keywords": ["futureflix", "hapi", "hapi.js", "mongodb", "node", "node.js", "tutorial", "tutorials"],
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fs-opensource/futureflix-starter-kit.git"
   },
   "scripts": {
+    "cleanup": "node ./data/load-sample-data.js --destroy",
+    "pumpitup": "node ./data/load-sample-data.js",
     "test": "lab --assert code --leaks --coverage"
   }
 }

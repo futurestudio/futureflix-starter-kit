@@ -2,6 +2,10 @@
 
 const Hapi = require('hapi')
 const Path = require('path')
+const Dotenv = require('dotenv')
+
+// import environment variables from local secrets.env file
+Dotenv.config({ path: Path.resolve(__dirname, 'secrets.env') })
 
 // create new server instance and connection information
 const server = new Hapi.Server({
@@ -23,6 +27,12 @@ server
     },
     {
       plugin: require('./server/base')
+    },
+    {
+      register: require('./server/movies')
+    },
+    {
+      register: require('./server/tv-shows')
     },
     {
       plugin: require('./server/add-user-to-views')

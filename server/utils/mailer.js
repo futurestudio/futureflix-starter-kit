@@ -56,7 +56,7 @@ const prepareTemplate = (filename, options = {}) => {
 exports.send = (template, user, subject, data) => {
   return prepareTemplate(template, data).then(({ html, text }) => {
     const mailOptions = {
-      from: `Your Name <handle@tld.io>`,
+      from: 'Your Name <handle@tld.io>',
       to: user.email,
       subject: subject,
       html,
