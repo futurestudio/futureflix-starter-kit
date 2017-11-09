@@ -4,6 +4,7 @@
     "node": true
   },
   "extends": "standard",
+  "files": ["*.js", "*.hbs"],
   "parserOptions": {
     "ecmaVersion": 8
   }
