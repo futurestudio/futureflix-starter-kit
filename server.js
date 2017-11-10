@@ -17,55 +17,58 @@ server.connection({
 })
 
 // register plugins to server instance
-server.register([
-  {
-    register: require('inert')
-  },
-  {
-    register: require('vision')
-  },
-  {
-    register: require('./server/authentication')
-  },
-  {
-    register: require('./server/base')
-  },
-  {
-    register: require('./server/movies')
-  },
-  {
-    register: require('./server/tv-shows')
-  },
-  {
-    register: require('./server/add-user-to-views')
-  },
-  {
-    register: require('./server/user-profile')
-  }
-], err => {
-  if (err) {
-    throw err
-  }
-
-  const viewsPath = Path.resolve(__dirname, 'public', 'views')
-
-  server.views({
-    engines: {
-      hbs: require('handlebars')
+server.register(
+  [
+    {
+      register: require('inert')
     },
-    path: viewsPath,
-    layoutPath: Path.resolve(viewsPath, 'layouts'),
-    layout: 'layout',
-    helpersPath: Path.resolve(viewsPath, 'helpers'),
-    partialsPath: Path.resolve(viewsPath, 'partials'),
-    isCached: process.env.NODE_ENV === 'production',
-    context: {
-      title: 'Futureflix'
+    {
+      register: require('vision')
+    },
+    {
+      register: require('./server/authentication')
+    },
+    {
+      register: require('./server/base')
+    },
+    {
+      register: require('./server/movies')
+    },
+    {
+      register: require('./server/tv-shows')
+    },
+    {
+      register: require('./server/add-user-to-views')
+    },
+    {
+      register: require('./server/user-profile')
     }
-  })
+  ],
+  err => {
+    if (err) {
+      throw err
+    }
 
-  // start your server
-  server.start().catch(err => {
-    throw err
-  })
-})
+    const viewsPath = Path.resolve(__dirname, 'public', 'views')
+
+    server.views({
+      engines: {
+        hbs: require('handlebars')
+      },
+      path: viewsPath,
+      layoutPath: Path.resolve(viewsPath, 'layouts'),
+      layout: 'layout',
+      helpersPath: Path.resolve(viewsPath, 'helpers'),
+      partialsPath: Path.resolve(viewsPath, 'partials'),
+      isCached: process.env.NODE_ENV === 'production',
+      context: {
+        title: 'Futureflix'
+      }
+    })
+
+    // start your server
+    server.start().catch(err => {
+      throw err
+    })
+  }
+)
