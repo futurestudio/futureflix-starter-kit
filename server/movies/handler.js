@@ -32,7 +32,7 @@ const Handler = {
           return reply.view('404')
         }
 
-        reply.view('movies/single', { movie }, { layout: 'movie-hero' })
+        reply.view('movies/single', { movie }, { layout: 'hero' })
       })
     },
     validate: {

@@ -1,14 +1,16 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
 html {
   background: hsl(210, 8%, 95%);
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Inter UI', sans-serif;
 }
 
 button.button,
 input[type='submit'].button {
-  font-family: Rubik, sans-serif;
+  font-family: 'Inter UI', sans-serif;
   font-weight: 500;
 }
 
