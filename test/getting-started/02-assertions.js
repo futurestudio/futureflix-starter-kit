@@ -17,6 +17,7 @@ experiment('hapi testing with lab and assertions with code,', () => {
   test('assert that 1 + 2 equals three', done => {
     expect(1 + 2).to.equal(3)
     expect('3').to.equal('3')
+    expect('3').to.not.equal(3)
 
     done()
   })
