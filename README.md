@@ -32,6 +32,9 @@ npm i
 # start Vagrant box
 vagrant up
 
+# create your secrets.env file from secrets.env.example
+cp secrets.env.sample secrets.env
+
 # import sample data
 npm run pumpitup
 
