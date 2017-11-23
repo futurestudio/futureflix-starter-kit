@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.1 — 2017-11-23
+- `add` step to create `secrets.env` from sample file in readme
+- `update` font from Rubik to Inter UI
+- `update` Eslint config
+- `remove` duplicated layouts
+
 ## 1.3.0 — 2017-11-07
 - `add` movie and TV show sample data
 - `add` NPM command to import the sample data into MongoDB: `npm run pumpitup`
