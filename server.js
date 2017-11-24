@@ -67,8 +67,13 @@ server.register(
     })
 
     // start your server
-    server.start().catch(err => {
-      throw err
-    })
+    server
+      .start()
+      .then(() => {
+        console.log(`Server started → ${server.info.uri}`)
+      })
+      .catch(err => {
+        throw err
+      })
   }
 )
