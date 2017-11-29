@@ -2,6 +2,7 @@
 
 const Lab = require('lab')
 const Code = require('code')
+const Path = require('path')
 const Hapi = require('hapi')
 
 // Test files must require the lab module, and export a test script
@@ -42,5 +43,45 @@ describe('inject requests with server.inject,', () => {
 
       done()
     })
+  })
+
+  it('register the base plugin and inject a request', done => {
+    const server = new Hapi.Server()
+    server.connection()
+
+    const basePluginPath = Path.resolve(__dirname, '..', '..', 'server', 'base')
+    server
+      .register([
+        {
+          register: require('inert')
+        },
+        {
+          register: require('vision')
+        },
+        {
+          register: require(basePluginPath)
+        }
+      ])
+      .then(() => {
+        const viewsPath = Path.resolve(__dirname, '..', '..', 'public', 'views')
+
+        server.views({
+          engines: {
+            hbs: require('handlebars')
+          },
+          path: viewsPath
+        })
+
+        const injectOptions = {
+          method: 'GET',
+          url: '/404'
+        }
+
+        server.inject(injectOptions, response => {
+          expect(response.statusCode).to.equal(404)
+
+          done()
+        })
+      })
   })
 })
