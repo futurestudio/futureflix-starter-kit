@@ -7,14 +7,13 @@ const Code = require('code')
 const lab = (exports.lab = Lab.script())
 
 // shortcuts from lab
-const experiment = lab.experiment
-const test = lab.test
+const { describe, it } = lab
 
 // shortcuts from code
 const expect = Code.expect
 
-experiment('hapi testing with lab and assertions with code,', () => {
-  test('assert that 1 + 2 equals three', done => {
+describe('hapi testing with lab and assertions with code,', () => {
+  it('asserts that 1 + 2 equals three', done => {
     expect(1 + 2).to.equal(3)
     expect('3').to.equal('3')
     expect('3').to.not.equal(3)
@@ -22,7 +21,7 @@ experiment('hapi testing with lab and assertions with code,', () => {
     done()
   })
 
-  test('assert different data types', done => {
+  it('asserts different data types', done => {
     expect(true).to.be.a.boolean()
     expect(true)
       .to.be.a.boolean()
