@@ -13,22 +13,18 @@ const { describe, it } = lab
 const expect = Code.expect
 
 describe('hapi testing with lab and assertions with code,', () => {
-  it('asserts that 1 + 2 equals three', done => {
+  it('asserts that 1 + 2 equals three', () => {
     expect(1 + 2).to.equal(3)
     expect('3').to.equal('3')
     expect('3').to.not.equal(3)
-
-    done()
   })
 
-  it('asserts different data types', done => {
+  it('asserts different data types', () => {
     expect(true).to.be.a.boolean()
     expect(true)
       .to.be.a.boolean()
       .and.to.not.equal(false)
 
     expect('this is a string').to.startsWith('this')
-
-    done()
   })
 })
