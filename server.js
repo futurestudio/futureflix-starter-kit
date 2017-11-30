@@ -22,24 +22,24 @@ server
     {
       plugin: require('vision')
     },
-    {
-      plugin: require('./server/authentication')
-    },
+    // {
+    //   plugin: require('./server/authentication')
+    // },
     {
       plugin: require('./server/base')
-    },
-    {
-      register: require('./server/movies')
-    },
-    {
-      register: require('./server/tv-shows')
-    },
-    {
-      plugin: require('./server/add-user-to-views')
-    },
-    {
-      plugin: require('./server/user-profile')
     }
+    // {
+    //   register: require('./server/movies')
+    // },
+    // {
+    //   register: require('./server/tv-shows')
+    // },
+    // {
+    //   plugin: require('./server/add-user-to-views')
+    // },
+    // {
+    //   plugin: require('./server/user-profile')
+    // }
   ])
   .then(() => {
     const viewsPath = Path.resolve(__dirname, 'public', 'views')
