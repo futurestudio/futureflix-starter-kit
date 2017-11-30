@@ -6,13 +6,13 @@ const Lab = require('lab')
 const lab = (exports.lab = Lab.script())
 
 // shortcuts to functions from lab
-const experiment = lab.experiment
-const test = lab.test
+// let's make the tests look like BDD
+const { describe, it } = lab
 
-experiment('getting started with hapi testing using lab,', { parallel: true }, () => {
-  test.skip('lab considers this test as TOOD and skips it')
+describe('getting started with hapi testing using lab,', { parallel: true }, () => {
+  it.skip('lab considers this test as TOOD and skips it')
 
-  test('always succeeding :)', done => {
+  it('always succeeds :)', done => {
     done()
   })
 })
