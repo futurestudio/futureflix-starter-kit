@@ -14,8 +14,7 @@ const Handler = {
       }
     },
     handler: async (request, h) => {
-      const movies = await Movie.random(7)
-      const shows = await Show.random(6)
+      const [movies, shows] = await Promise.all([Movie.random(7), Show.random(6)])
 
       return h.view(
         'index',
