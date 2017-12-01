@@ -3,6 +3,11 @@
 const Hapi = require('hapi')
 const Path = require('path')
 const Dotenv = require('dotenv')
+const Handlebars = require('handlebars')
+const HandlebarsRepeatHelper = require('handlebars-helper-repeat')
+
+// extend handlebars instance
+Handlebars.registerHelper('repeat', HandlebarsRepeatHelper)
 
 // import environment variables from local secrets.env file
 Dotenv.config({ path: Path.resolve(__dirname, 'secrets.env') })
@@ -46,7 +51,7 @@ server
 
     server.views({
       engines: {
-        hbs: require('handlebars')
+        hbs: Handlebars
       },
       path: viewsPath,
       layoutPath: Path.resolve(viewsPath, 'layouts'),
