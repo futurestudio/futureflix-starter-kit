@@ -13,24 +13,19 @@ const Handler = {
         redirectTo: false
       }
     },
-    handler: function (request, reply) {
-      Movie.random(7)
-        .then(movies => {
-          return Show.random(6).then(shows => {
-            return Promise.resolve({ movies, shows })
-          })
-        })
-        .then(({ movies, shows }) => {
-          reply.view(
-            'index',
-            {
-              movie: _.first(movies), // gets a random movie
-              movies: _.slice(movies, 1),
-              shows
-            },
-            { layout: 'hero' }
-          )
-        })
+    handler: async (request, h) => {
+      const movies = await Movie.random(7)
+      const shows = await Show.random(6)
+
+      return h.view(
+        'index',
+        {
+          movie: _.first(movies), // gets a random movie
+          movies: _.slice(movies, 1),
+          shows
+        },
+        { layout: 'hero' }
+      )
     }
   },
 
@@ -68,14 +63,14 @@ const Handler = {
   },
 
   missing: {
-    handler: (request, reply) => {
+    handler: (request, h) => {
       const accept = request.headers.accept
 
       if (accept && accept.match(/json/)) {
-        return reply(Boom.notFound('Fuckity fuck, this resource isn’t available.'))
+        return Boom.notFound('Fuckity fuck, this resource isn’t available.')
       }
 
-      reply.view('404').code(404)
+      return h.view('404').code(404)
     }
   }
 }

@@ -9,10 +9,8 @@ const lab = (exports.lab = Lab.script())
 // let's make the tests look like BDD
 const { describe, it } = lab
 
-describe('getting started with hapi testing using lab,', { parallel: true }, () => {
+describe('getting started with hapi testing using lab,', () => {
   it.skip('lab considers this test as TOOD and skips it')
 
-  it('always succeeds :)', done => {
-    done()
-  })
+  it('always succeeds :)', () => {})
 })

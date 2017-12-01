@@ -15,17 +15,16 @@ const { describe, it } = lab
 const expect = Code.expect
 
 describe('inject requests with server.inject,', () => {
-  it('inject a request', done => {
+  it('inject a request', async () => {
     const routeOptions = {
       method: 'GET',
       path: '/',
-      handler: (request, reply) => {
-        reply({ name: 'Marcus', isDeveloper: true, isHapiPassionate: 'YEEEEAHHH' })
+      handler: () => {
+        return { name: 'Marcus', isDeveloper: true, isHapiPassionate: 'YEEEEAHHH' }
       }
     }
 
     const server = new Hapi.Server()
-    server.connection()
     server.route(routeOptions)
 
     const injectOptions = {
@@ -33,55 +32,45 @@ describe('inject requests with server.inject,', () => {
       url: routeOptions.path
     }
 
-    server.inject(injectOptions, response => {
-      expect(response.statusCode).to.equal(200)
+    const response = await server.inject(injectOptions)
+    expect(response.statusCode).to.equal(200)
 
-      // shortcut to payload
-      const payload = JSON.parse(response.payload)
-
-      expect(payload.name).to.equal('Marcus')
-
-      done()
-    })
+    // shortcut to payload
+    const payload = JSON.parse(response.payload)
+    expect(payload.name).to.equal('Marcus')
   })
 
-  it('register the base plugin and inject a request', done => {
+  it('register the base plugin and inject a request', async () => {
     const server = new Hapi.Server()
-    server.connection()
 
     const basePluginPath = Path.resolve(__dirname, '..', '..', 'server', 'base')
-    server
-      .register([
-        {
-          register: require('inert')
-        },
-        {
-          register: require('vision')
-        },
-        {
-          register: require(basePluginPath)
-        }
-      ])
-      .then(() => {
-        const viewsPath = Path.resolve(__dirname, '..', '..', 'public', 'views')
+    await server.register([
+      {
+        plugin: require('inert')
+      },
+      {
+        plugin: require('vision')
+      },
+      {
+        plugin: require(basePluginPath)
+      }
+    ])
 
-        server.views({
-          engines: {
-            hbs: require('handlebars')
-          },
-          path: viewsPath
-        })
+    const viewsPath = Path.resolve(__dirname, '..', '..', 'public', 'views')
 
-        const injectOptions = {
-          method: 'GET',
-          url: '/404'
-        }
+    server.views({
+      engines: {
+        hbs: require('handlebars')
+      },
+      path: viewsPath
+    })
 
-        server.inject(injectOptions, response => {
-          expect(response.statusCode).to.equal(404)
+    const injectOptions = {
+      method: 'GET',
+      url: '/404'
+    }
 
-          done()
-        })
-      })
+    const response = await server.inject(injectOptions)
+    expect(response.statusCode).to.equal(404)
   })
 })
