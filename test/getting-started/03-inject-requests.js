@@ -16,20 +16,18 @@ const expect = Code.expect
 
 describe('inject requests with server.inject,', () => {
   it('inject a request', async () => {
-    const routeOptions = {
+    const server = new Hapi.Server()
+    server.route({
       method: 'GET',
       path: '/',
       handler: () => {
         return { name: 'Marcus', isDeveloper: true, isHapiPassionate: 'YEEEEAHHH' }
       }
-    }
-
-    const server = new Hapi.Server()
-    server.route(routeOptions)
+    })
 
     const injectOptions = {
-      method: routeOptions.method,
-      url: routeOptions.path
+      method: 'GET',
+      url: '/'
     }
 
     const response = await server.inject(injectOptions)

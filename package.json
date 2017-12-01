@@ -53,7 +53,16 @@
     "node": ">= 6.0"
   },
   "homepage": "https://github.com/fs-opensource/futureflix-starter-kit",
-  "keywords": ["futureflix", "hapi", "hapi.js", "mongodb", "node", "node.js", "tutorial", "tutorials"],
+  "keywords": [
+    "futureflix",
+    "hapi",
+    "hapi.js",
+    "mongodb",
+    "node",
+    "node.js",
+    "tutorial",
+    "tutorials"
+  ],
   "license": "MIT",
   "private": true,
   "repository": {
