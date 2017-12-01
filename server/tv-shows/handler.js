@@ -1,5 +1,8 @@
 'use strict'
 
+const Path = require('path')
+const Show = require(Path.resolve(__dirname, '..', 'models')).Show
+
 const Handler = {
   index: {
     plugins: {
@@ -8,7 +11,9 @@ const Handler = {
       }
     },
     handler: function (request, reply) {
-      reply.view('tv-shows/index')
+      Show.find().then(shows => {
+        reply.view('tv-shows/index', { shows })
+      })
     }
   },
 
