@@ -25,6 +25,7 @@
     "boom": "~7.1.1",
     "dotenv": "~4.0.0",
     "handlebars": "~4.0.10",
+    "handlebars-helper-repeat": "~1.0.0",
     "hapi": "~17.1.1",
     "hoek": "~5.0.2",
     "html-to-text": "~3.3.0",
