@@ -11,10 +11,10 @@ const Handler = {
         redirectTo: false
       }
     },
-    handler: (request, reply) => {
-      Movie.find().then(movies => {
-        reply.view('movies/index', { movies })
-      })
+    handler: async (request, h) => {
+      const movies = await Movie.find()
+
+      return h.view('movies/index', { movies })
     }
   },
 
@@ -24,16 +24,16 @@ const Handler = {
         redirectTo: false
       }
     },
-    handler: (request, reply) => {
+    handler: async (request, h) => {
       const slug = request.params.slug
 
-      Movie.findOne({ 'ids.slug': slug }).then(movie => {
-        if (!movie) {
-          return reply.view('404')
-        }
+      const movie = await Movie.findOne({ 'ids.slug': slug })
 
-        reply.view('movies/single', { movie }, { layout: 'hero' })
-      })
+      if (!movie) {
+        return h.view('404')
+      }
+
+      return h.view('movies/single', { movie }, { layout: 'hero' })
     },
     validate: {
       params: {
