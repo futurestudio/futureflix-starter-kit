@@ -39,12 +39,9 @@
   },
   "devDependencies": {
     "code": "~5.1.2",
-    "eslint-config-prettier": "~2.9.0",
-    "eslint-config-prettier-standard": "~1.0.1",
     "eslint-config-standard": "~10.2.1",
     "eslint-plugin-import": "~2.8.0",
     "eslint-plugin-node": "~5.2.1",
-    "eslint-plugin-prettier": "~2.3.1",
     "eslint-plugin-promise": "~3.6.0",
     "eslint-plugin-standard": "~3.0.1",
     "lab": "~15.1.2",
@@ -59,10 +56,12 @@
     "hapi",
     "hapi.js",
     "mongodb",
+    "mongoose",
     "node",
     "node.js",
     "tutorial",
-    "tutorials"
+    "tutorials",
+    "bulma"
   ],
   "license": "MIT",
   "private": true,
@@ -73,6 +72,7 @@
   "scripts": {
     "cleanup": "node ./data/load-sample-data.js --destroy",
     "pumpitup": "node ./data/load-sample-data.js",
-    "test": "lab --assert code --leaks --coverage"
+    "test": "lab --assert code --leaks --coverage",
+    "lint": "./node_modules/eslint/bin/eslint.js . --fix --ext .js"
   }
 }

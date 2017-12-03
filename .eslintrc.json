@@ -3,18 +3,8 @@
     "es6": true,
     "node": true
   },
-  "extends": ["prettier-standard"],
+  "extends": ["standard"],
   "parserOptions": {
     "ecmaVersion": 8
-  },
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "semi": false,
-        "singleQuote": true,
-        "printWidth": 120
-      }
-    ]
   }
 }

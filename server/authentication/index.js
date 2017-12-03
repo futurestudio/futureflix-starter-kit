@@ -1,6 +1,6 @@
 'use strict'
 
-async function register(server, options) {
+async function register (server, options) {
   // declare dependencies to hapi-auth-* plugins
   await server.register([
     // register hapi-auth-* plugins here

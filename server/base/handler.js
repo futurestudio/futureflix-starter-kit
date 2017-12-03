@@ -13,7 +13,7 @@ const Handler = {
         redirectTo: false
       }
     },
-    handler: async (request, h) => {
+    handler: async function test (request, h) {
       const [movies, shows] = await Promise.all([Movie.random(7), Show.random(6)])
 
       return h.view(

@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function(lvalue, rvalue, options) {
+module.exports = (lvalue, rvalue, options) => {
   if (arguments.length < 3) {
     throw new Error('Handlebars Helper equal needs 2 parameters')
   }
