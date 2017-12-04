@@ -18,9 +18,10 @@ const server = new Hapi.Server({
   port: 3000
 })
 
-// register plugins to server instance
-server
-  .register([
+// register plugins, configure views and start the server instance
+async function start () {
+  // register plugins to server instance
+  await server.register([
     {
       plugin: require('inert')
     },
@@ -46,31 +47,33 @@ server
       plugin: require('./server/add-user-to-views')
     }
   ])
-  .then(() => {
-    const viewsPath = Path.resolve(__dirname, 'public', 'views')
 
-    server.views({
-      engines: {
-        hbs: Handlebars
-      },
-      path: viewsPath,
-      layoutPath: Path.resolve(viewsPath, 'layouts'),
-      layout: 'layout',
-      helpersPath: Path.resolve(viewsPath, 'helpers'),
-      partialsPath: Path.resolve(viewsPath, 'partials'),
-      isCached: process.env.NODE_ENV === 'production',
-      context: {
-        title: 'Futureflix'
-      }
-    })
+  // view configuration
+  const viewsPath = Path.resolve(__dirname, 'public', 'views')
 
-    // start your server
-    server
-      .start()
-      .then(() => {
-        console.log(`Server started → ${server.info.uri}`)
-      })
-      .catch(err => {
-        throw err
-      })
+  server.views({
+    engines: {
+      hbs: Handlebars
+    },
+    path: viewsPath,
+    layoutPath: Path.resolve(viewsPath, 'layouts'),
+    layout: 'layout',
+    helpersPath: Path.resolve(viewsPath, 'helpers'),
+    partialsPath: Path.resolve(viewsPath, 'partials'),
+    isCached: process.env.NODE_ENV === 'production',
+    context: {
+      title: 'Futureflix'
+    }
   })
+
+  // start your server
+  try {
+    await server.start()
+    console.log(`Server started → ${server.info.uri}`)
+  } catch (err) {
+    console.error(err)
+    process.exit(1)
+  }
+}
+
+start()
