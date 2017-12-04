@@ -2,6 +2,7 @@
 
 const Path = require('path')
 const Show = require(Path.resolve(__dirname, '..', 'models')).Show
+const Paginator = require(Path.resolve(__dirname, '..', 'utils', 'paginator'))
 
 const Handler = {
   index: {
@@ -11,13 +12,14 @@ const Handler = {
       }
     },
     handler: async (request, h) => {
-      const page = parseFloat(request.params.page) || 1
-      const limit = 8
-
       const showCount = await Show.count()
-      const pageCount = Math.ceil(showCount / limit)
+      const pagination = new Paginator(request, showCount)
 
-      if (page > pageCount) {
+      // shortcuts
+      const limit = pagination.limit
+      const page = pagination.page
+
+      if (page > pagination.pageCount) {
         return h.view('404')
       }
 
@@ -26,12 +28,9 @@ const Handler = {
         .skip(skip)
         .limit(limit)
 
-      const previous = page === 1 ? 0 : page - 1
-      const next = page === pageCount ? 0 : page + 1
-
       return h.view('tv-shows/index', {
         shows,
-        pagination: { page, count: showCount, pageCount, next, previous, for: 'shows' }
+        pagination
       })
     }
   },
