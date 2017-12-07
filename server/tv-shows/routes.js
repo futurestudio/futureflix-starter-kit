@@ -10,6 +10,11 @@ const Routes = [
   },
   {
     method: 'GET',
+    path: '/shows/page/{page}',
+    config: Handler.index
+  },
+  {
+    method: 'GET',
     path: '/shows/trending',
     config: Handler.trending
   },

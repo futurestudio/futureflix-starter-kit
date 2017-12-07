@@ -2,16 +2,16 @@
 
 const Routes = require('./routes')
 
-exports.register = (server, options, next) => {
-  server.dependency([ 'vision' ])
+function register (server, options) {
+  server.dependency(['vision'])
 
   server.route(Routes)
-  server.log('info', 'Plugin registered: movies')
 
-  next()
+  server.log('info', 'Plugin registered: movies')
 }
 
-exports.register.attributes = {
+exports.plugin = {
   name: 'movies',
-  version: '1.0.0'
+  version: '1.0.0',
+  register
 }

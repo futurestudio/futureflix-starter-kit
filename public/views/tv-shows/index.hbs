@@ -1,46 +1,25 @@
 <div class="columns">
-    <div class="column"></div>
+    <div class="column is-8 is-offset-2">
+        {{!> shows-tabs }}
 
-    <div class="column is-three-quarters">
-        {{> shows-tabs }}
+        <h1 class="is-size-2 has-margin-bottom-3 has-text-weight-bold">
+            TV Shows
+        </h1>
 
-        <div class="content">
-            <h1 class="title">
-                TV Shows
-            </h1>
-            <p class="subtitle">
-                You’re into shows 📺 awesome!
-            </p>
-
-            <hr>
-
-            <div class="columns">
-                <div class="column">
-                    <figure class="image">
-                        <img src="/images/covers/a-monster-calls.jpg">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="/images/covers/fargo.jpg" width="">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="/images/covers/gotham.jpg" width="">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="/images/covers/sherlock.jpg" width="">
-                    </figure>
-                </div>
+        {{! grid modifier: is-6 increases the column gap and is-multiline adds prober breaks to the grid}}
+        <div class="columns is-6 is-variable is-multiline content">
+            {{#each shows}}
+            <div class="column is-one-quarter has-margin-bottom-3">
+                <a href="/shows/{{ids.slug}}">
+                    <img src="{{images.poster}}">
+                    <strong>
+                        {{title}}
+                    </strong>
+                </a>
             </div>
-            <p>
-                <a href="/movies/a-monster-calls">A Monster Calls</a>.
-            </p>
+            {{/each}}
         </div>
-    </div>
 
-    <div class="column"></div>
-</div>
+        {{> pagination}}
+
+    </div>

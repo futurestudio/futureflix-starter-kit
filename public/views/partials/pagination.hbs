@@ -1,0 +1,21 @@
+{{#pagination}}
+
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        {{#if previous}}
+            <a class="pagination-previous" href="{{previous}}">Previous</a>
+        {{/if}}
+
+        {{#if next}}
+            <a class="pagination-next" href="{{next}}">Next</a>
+        {{/if}}
+
+        <ul class="pagination-list">
+            {{#repeat pageCount start=1 }}
+                <li>
+                    <span class="pagination-link{{#isEqual @index page}} is-current{{/isEqual}}" aria-current="page" aria-label="{{#isEqual @index page}}Page {{else}}Goto page {{@index}}{{/isEqual}}">{{@index}}</span>
+                </li>
+            {{/repeat}}
+        </ul>
+    </nav>
+
+{{/pagination}}
