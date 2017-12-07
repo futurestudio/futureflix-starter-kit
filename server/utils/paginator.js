@@ -47,7 +47,7 @@ class Paginator {
 
     // there's no "/page/" part in the URL (like initial overview page), then just return the current url
     if (!this.hasPageParam(url)) {
-      return url
+      return `${url}/page`
     }
 
     return url.substring(0, url.lastIndexOf('/'))
