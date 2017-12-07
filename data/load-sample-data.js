@@ -7,9 +7,7 @@ const Listr = require('listr')
 const Dotenv = require('dotenv')
 
 // import environment variables from local secrets.env file
-Dotenv.config({
-  path: Path.resolve(__dirname, '..', 'secrets.env')
-})
+Dotenv.config({ path: Path.resolve(__dirname, '..', 'secrets.env') })
 
 // import models
 const Models = require(Path.resolve(__dirname, '..', 'server', 'models'))

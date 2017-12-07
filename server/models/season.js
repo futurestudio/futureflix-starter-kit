@@ -34,19 +34,4 @@ const seasonSchema = new Schema(
   }
 )
 
-//
-seasonSchema.virtual('episodes', {
-  ref: 'Episode',
-  localField: 'ids.trakt',
-  foreignField: 'ids.season'
-})
-
-function autopopulate (next) {
-  this.populate('episodes')
-  next()
-}
-
-seasonSchema.pre('find', autopopulate)
-seasonSchema.pre('findOne', autopopulate)
-
 module.exports = Mongoose.model('Season', seasonSchema)

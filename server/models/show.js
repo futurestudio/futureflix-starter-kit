@@ -52,25 +52,6 @@ const showSchema = new Schema(
   }
 )
 
-//
-showSchema.virtual('seasons', {
-  ref: 'Season',
-  localField: 'ids.trakt',
-  foreignField: 'ids.show',
-
-  populate: {
-    path: 'episodes'
-  }
-})
-
-function autopopulate (next) {
-  this.populate('seasons')
-  next()
-}
-
-showSchema.pre('find', autopopulate)
-showSchema.pre('findOne', autopopulate)
-
 // add plugin to find random movies
 showSchema.plugin(MongooseRandom)
 
