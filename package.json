@@ -71,6 +71,7 @@
   },
   "scripts": {
     "cleanup": "node ./data/load-sample-data.js --destroy",
+    "setup": "npm run pumpitup",
     "pumpitup": "node ./data/load-sample-data.js",
     "test": "lab --assert code --leaks --coverage",
     "lint": "./node_modules/eslint/bin/eslint.js . --fix --ext .js"
