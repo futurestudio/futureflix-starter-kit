@@ -13,8 +13,8 @@ const showSchema = new Schema(
       required: true
     },
     ids: {
-      trakt: Number,
-      slug: String,
+      trakt: { type: Number, unique: true },
+      slug: { type: String, unique: true },
       imdb: String,
       tvdb: Number,
       tmdb: Number,
