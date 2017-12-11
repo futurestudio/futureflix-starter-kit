@@ -1,30 +1,97 @@
-<div class="columns">
-    <div class="column"></div>
-    <div class="column is-three-quarters">
-        {{> shows-tabs }}
+<style>
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 10%;
+        opacity: .8;
+        transition: all 1s;
+    }
 
-        <div class="content">
-            <div class="is-clearfix">
-                <div class="is-pulled-left">
-                    <h1 class="title">
-                        {{title}}
-                    </h1>
-                    <p class="subtitle is-small">
-                        {{year}} <span class="has-text-info">{{rating}}</span>
-                    </p>
-                </div>
-                <div class="is-pulled-right">
-                    <br>
-                    <img src="/images/heart.svg" alt="">
-                </div>
+    .hero {
+        background-color: black;
+        background-size: cover;
+        background-position: 50% 10%;
+        color: white;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .hero.is-dark .nav-item a:not(.button),
+    .hero.is-dark a.nav-item {
+        color: rgba(255, 255, 255, .8)
+    }
+</style>
+
+{{#show}}
+<section class="hero is-dark is-bold is-medium">
+
+    {{> hero-movies-shows }}
+
+</section>
+
+<div class="content container">
+    <div class="columns is-one-quarter">
+        <div class="column">
+            <img src="{{images.poster}}">
+
+            <h2>Genres</h2>
+            <div class="tags">
+                {{#each genres}}
+                <span class="tag is-warning">{{this}}</span>
+                {{/each}}
             </div>
 
-            <hr>
+            {{#if seasons}}
+            <h2>Seasons</h2>
+            <div class="">
+                {{#each seasons}}
+                <p>{{this}}</p>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
 
-            <div>
-                <img src="/images/covers/a-monster-calls.jpg" width="200">
+        <div class="column is-three-quarters content has-white-background">
+            <div class="container is-fluid">
+                <h1>
+                    {{title}}
+                </h1>
+
+                <p class="subtitle has-text-grey">
+                    <img src="/images/star-yellow.svg" alt=""> {{formatRating rating}} out of {{votes}} Votes
+                </p>
+                <p>
+                    <a href="{{homepage}}" class="button is-secondary is-small">
+                        Visit Homepage
+                    </a>
+                </p>
+                <p>
+                    {{overview}}
+                </p>
+
+                {{#if trailer}}
+                <h2>Trailer</h2>
+                <div class="video-container">
+                    <iframe src="{{video trailer}}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                {{/if}}
+
+                <h2>Comments</h2>
+                {{#if comments}}
+                <div>
+                    {{! implement this as part of learnhapi.com :) }}
+                </div>
+                {{else}}
+                <div class="notification">
+                    Be the first who comments on {{title}}! {{! implement the actual commenting system as part of learnhapi.com :) }}
+                </div>
+                {{/if}}
             </div>
         </div>
     </div>
-    <div class="column"></div>
 </div>
+{{/show}}

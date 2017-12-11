@@ -42,11 +42,14 @@ const Handler = {
       }
     },
     handler: async (request, h) => {
-      return h.view('tv-shows/single', {
-        title: 'A Monster Calls',
-        year: 2016,
-        rating: 'PG13'
-      })
+      const slug = request.params.slug
+      const show = await Show.findOne({ 'ids.slug': slug }).populate('seasons')
+
+      if (!show) {
+        return h.view('404')
+      }
+
+      return h.view('tv-shows/single', { show }, { layout: 'hero' })
     }
   },
 
