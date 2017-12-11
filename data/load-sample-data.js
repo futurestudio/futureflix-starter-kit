@@ -33,36 +33,34 @@ function pumpItUp () {
   return _.concat(
     // add task to remove data before import to avoid errors
     destroyDB(),
-    // the actual task to import data
+
+    // the actual tasks to import data
     [
       {
         title: 'Importing movies and TV shows 📺 👌',
-        task: (ctx, task) => {
+        task: async (ctx, task) => {
           // show explicit output for the two step process:
           // first movies, second TV shows
           task.output = 'Importing movies'
 
           // import movies …
-          return Movie.insertMany(Movies).then(() => {
-            // … then TV shows
-            task.output = 'Importing TV shows'
+          await Movie.insertMany(Movies)
 
-            return Show.insertMany(Shows)
-          })
+          // … then TV shows
+          task.output = 'Importing TV shows'
+          await Show.insertMany(Shows)
         }
       },
       {
         title: 'Importing seasons and episodes for TV shows',
         task: (ctx, task) => {
-          // show explicit output for the two step process:
-          // first movies, second TV shows
           task.output = 'Importing seasons'
 
-          const promises = Shows.map(show => {
-            return Season.insertMany(show.seasons).then(() => {
-              return show.seasons.map(season => {
-                return Episode.insertMany(season.episodes)
-              })
+          const promises = Shows.map(async show => {
+            await Season.insertMany(show.seasons)
+
+            return show.seasons.map(season => {
+              return Episode.insertMany(season.episodes)
             })
           })
 
@@ -83,31 +81,27 @@ function destroyDB () {
   return [
     {
       title: 'Au revior existing data 😢 🔥',
-      skip: () =>
-        Movie.findOne().then(movie => {
-          // skip task if no movie is available
-          return !movie
-        }),
-      task: (ctx, task) => {
-        task.output = 'Deleting movies'
-
+      skip: async () => {
+        const movie = await Movie.findOne()
+        // skip task if no movie is available
+        return !movie
+      },
+      task: async (ctx, task) => {
         // delete movies …
-        return Movie.remove()
-          .then(() => {
-            // … then episodes
-            task.output = 'Deleting episodes'
-            return Episode.remove()
-          })
-          .then(() => {
-            // … then seasons
-            task.output = 'Deleting seasons'
-            return Season.remove()
-          })
-          .then(() => {
-            // … then TV shows
-            task.output = 'Deleting TV shows'
-            return Show.remove()
-          })
+        task.output = 'Deleting movies'
+        await Movie.remove()
+
+        // … then episodes
+        task.output = 'Deleting episodes'
+        await Episode.remove()
+
+        // … then seasons
+        task.output = 'Deleting seasons'
+        await Season.remove()
+
+        // … then TV shows
+        task.output = 'Deleting TV shows'
+        await Show.remove()
       }
     }
   ]
@@ -119,11 +113,9 @@ function destroyDB () {
  * @param  {Listr} tasks  Listr instance with tasks
  * @return {void}
  */
-function kickoff (tasks) {
-  tasks
-    .run()
-    .then(process.exit)
-    .catch(process.exit)
+async function kickoff (tasks) {
+  await tasks.run()
+  process.exit()
 }
 
 /**
