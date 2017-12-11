@@ -19,7 +19,6 @@ const Episode = Models.Episode
 // read movies and TV show sample data as JSON
 const Movies = JSON.parse(Fs.readFileSync(Path.resolve(__dirname, 'movies.json'), 'utf8'))
 const Shows = JSON.parse(Fs.readFileSync(Path.resolve(__dirname, 'shows.json'), 'utf8'))
-const Seasons = JSON.parse(Fs.readFileSync(Path.resolve(__dirname, 'seasons.json'), 'utf8'))
 
 /**
  * Load Futureflix sample movies and TV shows into MongoDB
@@ -47,25 +46,27 @@ function pumpItUp () {
           return Movie.insertMany(Movies).then(() => {
             // … then TV shows
             task.output = 'Importing TV shows'
+
             return Show.insertMany(Shows)
           })
         }
       },
       {
-        title: 'Importing seasons and episodes for TV shows 📺 🤓',
+        title: 'Importing seasons and episodes for TV shows',
         task: (ctx, task) => {
+          // show explicit output for the two step process:
+          // first movies, second TV shows
           task.output = 'Importing seasons'
 
-          const promises = Seasons.map(seasons => {
-            return Season.insertMany(seasons).then(() => {
-              task.output = 'Importing episodes'
-
-              return seasons.map(season => {
+          const promises = Shows.map(show => {
+            return Season.insertMany(show.seasons).then(() => {
+              return show.seasons.map(season => {
                 return Episode.insertMany(season.episodes)
               })
             })
           })
 
+          task.output = 'Importing episodes'
           return Promise.all(promises)
         }
       }

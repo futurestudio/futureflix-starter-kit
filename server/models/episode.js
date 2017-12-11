@@ -15,7 +15,7 @@ const episodeSchema = new Schema(
       tvdb: Number,
       tmdb: Number,
       tvrage: Number,
-      season: { type: Number, ref: 'Season' }
+      season: { type: Schema.Types.ObjectId, ref: 'Season' }
     },
     number: Number,
     number_abs: Number,
