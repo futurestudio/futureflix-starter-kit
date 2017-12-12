@@ -1,5 +1,6 @@
 'use strict'
 
+const Joi = require('joi')
 const Path = require('path')
 const Show = require(Path.resolve(__dirname, '..', 'models')).Show
 const Paginator = require(Path.resolve(__dirname, '..', 'utils', 'paginator'))
@@ -43,13 +44,18 @@ const Handler = {
     },
     handler: async (request, h) => {
       const slug = request.params.slug
-      const show = await Show.findOne({ 'ids.slug': slug }).populate('seasons')
+      const show = await Show.findOne({ 'ids.slug': slug })
 
       if (!show) {
         return h.view('404')
       }
 
       return h.view('tv-shows/single', { show }, { layout: 'hero' })
+    },
+    validate: {
+      params: {
+        slug: Joi.string().required()
+      }
     }
   },
 

@@ -26,7 +26,6 @@ const Handler = {
     },
     handler: async (request, h) => {
       const slug = request.params.slug
-
       const movie = await Movie.findOne({ 'ids.slug': slug })
 
       if (!movie) {
