@@ -18,7 +18,7 @@ const Episode = Models.Episode
 
 // read movies and TV show sample data as JSON
 const Movies = JSON.parse(Fs.readFileSync(Path.resolve(__dirname, 'movies.json'), 'utf8'))
-const Shows = JSON.parse(Fs.readFileSync(Path.resolve(__dirname, 'shows.json'), 'utf8'))
+const Shows = JSON.parse(Fs.readFileSync(Path.resolve(__dirname, 'shows_all_in_one.json'), 'utf8'))
 
 /**
  * Load Futureflix sample movies and TV shows into MongoDB

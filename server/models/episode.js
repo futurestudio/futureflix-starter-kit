@@ -14,12 +14,11 @@ const episodeSchema = new Schema(
       imdb: String,
       tvdb: Number,
       tmdb: Number,
-      tvrage: Number,
-      season: { type: Schema.Types.ObjectId, ref: 'Season' }
+      tvrage: Number
     },
+    season: { type: Schema.Types.ObjectId, ref: 'Season' },
     number: Number,
     number_abs: Number,
-    season: Number,
     overview: String,
     rating: Number,
     votes: Number,

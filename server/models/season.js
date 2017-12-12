@@ -15,9 +15,9 @@ const seasonSchema = new Schema(
       slug: String,
       imdb: String,
       tmdb: Number,
-      tvrage: Number,
-      show: { type: Schema.Types.ObjectId, ref: 'Show' }
+      tvrage: Number
     },
+    show: { type: Schema.Types.ObjectId, ref: 'Show' },
     number: Number,
     overview: String,
     first_aired: String,
