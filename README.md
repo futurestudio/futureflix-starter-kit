@@ -9,7 +9,7 @@ At this point, the current project’s implementation is only available for enro
 
 
 ## Requirements
-The **Futureflix Starter Kit** has full support for async/await and therefore requires Node.js v8.x.
+The **Futureflix Starter Kit** has full support for `async/await` and therefore requires Node.js v8.x.
 
 - Node.js **v8.x** or later
 - NPM or Yarn to install the project’s dependencies
