@@ -9,7 +9,7 @@ The finished project’s implementation is only available for Future Students. I
 
 
 ## Requirements
-The **Futureflix Starter Kit** has full support for `async/await` and therefore requires Node.js v8.x.
+The **Futureflix Starter Kit** uses hapi v17 and has full support for `async/await` and therefore requires Node.js v8.x.
 
 - Node.js **v8.x** or later
 - NPM/Yarn to install the project’s dependencies
