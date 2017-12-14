@@ -4,17 +4,20 @@ class Paginator {
   constructor (request, totalCount, perPage = 8) {
     const lastPage = Math.ceil(totalCount / perPage)
     const currentPage = this.getCurrentPage(request)
+    const from = currentPage * perPage - perPage
 
     const previous = this.getPrevious(request, currentPage)
     const next = this.getNext(request, currentPage, lastPage)
 
     return {
-      currentPage,
       total: totalCount,
+      perPage,
+      currentPage,
       lastPage,
       next,
       previous,
-      perPage
+      from,
+      to: from + perPage
     }
   }
 

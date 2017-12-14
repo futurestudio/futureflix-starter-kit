@@ -16,18 +16,13 @@ const Handler = {
       const showCount = await Show.count()
       const pagination = new Paginator(request, showCount)
 
-      // shortcuts
-      const limit = pagination.limit
-      const page = pagination.page
-
-      if (page > pagination.pageCount) {
+      if (pagination.currentPage > pagination.lastPage) {
         return h.view('404')
       }
 
-      const skip = page * limit - limit
       const shows = await Show.find()
-        .skip(skip)
-        .limit(limit)
+        .skip(pagination.from)
+        .limit(pagination.perPage)
 
       return h.view('tv-shows/index', {
         shows,
