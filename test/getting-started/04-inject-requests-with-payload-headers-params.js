@@ -16,15 +16,21 @@ const expect = Code.expect
 describe('requests with payload, headers and params,', () => {
   it('injects payload', async () => {
     const server = new Hapi.Server()
+
+    // add route to hapi server with handler that directly returns the request payload
     server.route({
       method: 'POST',
       path: '/',
       handler: request => {
+        // you can do assertions here, too
         expect(request.payload).to.exist()
+
         return request.payload
       }
     })
 
+    // remember: injecting payload isn't available on GET requests
+    // use HTTP methods that support reuqest payload, like POST and PUT
     const injectOptions = {
       method: 'POST',
       url: '/',
@@ -34,6 +40,7 @@ describe('requests with payload, headers and params,', () => {
     const response = await server.inject(injectOptions)
     const payload = JSON.parse(response.payload || {})
 
+    // set your expectations :)
     expect(payload.name).to.equal('Marcus')
     expect(payload.isDeveloper).to.equal(true)
     expect(payload.isHapiPassionate).to.exist()
@@ -41,6 +48,7 @@ describe('requests with payload, headers and params,', () => {
 
   it('injects headers', async () => {
     const server = new Hapi.Server()
+
     server.route({
       method: 'GET',
       path: '/',
@@ -64,6 +72,7 @@ describe('requests with payload, headers and params,', () => {
 
   it('injects query params', async () => {
     const server = new Hapi.Server()
+
     server.route({
       method: 'GET',
       path: '/',
@@ -96,6 +105,7 @@ describe('requests with payload, headers and params,', () => {
 
   it('injects payload, headers and params', async () => {
     const server = new Hapi.Server()
+
     server.route({
       method: 'POST',
       path: '/{name}',
