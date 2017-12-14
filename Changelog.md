@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0 — 2017-12-xx (soon)
+
+* `add` thank you section in readme
+* `update` readme: add Node.js v8.x requirement, link to download for previous version
+* `update` sample data and relationships
+* `update` getting started tests
+* `update` paginator utility to expose more fields
+* `update` Vagrantfile with minor reformats
+
 ## 2.0.0-rc.1 — 2017-12-07
 
 * **`upgrade` code base to hapi v17**
