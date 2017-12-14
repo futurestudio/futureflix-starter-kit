@@ -29,12 +29,16 @@ describe('requests with payload, headers and params,', () => {
       }
     })
 
-    // remember: injecting payload isn't available on GET requests
+    // remember: injecting payload isn’t available on GET requests
     // use HTTP methods that support reuqest payload, like POST and PUT
     const injectOptions = {
       method: 'POST',
       url: '/',
-      payload: { name: 'Marcus', isDeveloper: true, isHapiPassionate: 'YEEEEAHHH' }
+      payload: {
+        name: 'Marcus',
+        isDeveloper: true,
+        isHapiPassionate: 'YEEEEAHHH'
+      }
     }
 
     const response = await server.inject(injectOptions)
@@ -89,6 +93,7 @@ describe('requests with payload, headers and params,', () => {
 
   it('injects path params', async () => {
     const server = new Hapi.Server()
+
     server.route({
       method: 'GET',
       path: '/{name}',
