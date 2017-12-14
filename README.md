@@ -17,6 +17,8 @@ The **Futureflix Starter Kit** has full support for `async/await` and therefore 
 
 Download the Futureflix Starter Kit in version `1.x` from GitHub’s release page if you want to run it with Node.js v6.x.
 
+Seems doable, huh? 😃
+
 
 ## Setup and Run
 To run your own Futureflix instance, clone this repository, install the dependencies, start a MongoDB instance in a Vagrant VM or on your own machine.
@@ -58,3 +60,10 @@ In case you found a different way to implement a feature, we’re happy to hear 
 Error fixes and additional explanations are always welcome. If you find something, we absolutely appreciate your pull request.
 
 Make it rock!
+
+## Thank You with a Hug!
+It’s great to see you exploring this repository. Really! Dig through the code and hopefully you’ll take wins away ❤️
+
+### Sample data from trakt.tv
+Movie and TV show sample data for Futureflix comes from [trakt.tv](https://trakt.tv/). Track your progress on watched movies and shows, never forget where you left off a week ago! Trakt is a nice platform with dozens of apps for any client. 
+We’re not payed to say that 😅
