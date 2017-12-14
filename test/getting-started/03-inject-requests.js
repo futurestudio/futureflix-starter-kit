@@ -15,27 +15,54 @@ const { describe, it } = lab
 const expect = Code.expect
 
 describe('inject requests with server.inject,', () => {
+  it('inject a request to a hapi server without a route', async () => {
+    const server = new Hapi.Server()
+
+    // these must match the route you want to test
+    const injectOptions = {
+      method: 'GET',
+      url: '/'
+    }
+
+    // wait for the response and the request to finish
+    const response = await server.inject(injectOptions)
+
+    // there’s no route in the new hapi server
+    // the injected request should respond with 404
+    expect(response.statusCode).to.equal(404)
+  })
+
   it('inject a request', async () => {
     const server = new Hapi.Server()
     server.route({
       method: 'GET',
       path: '/',
       handler: () => {
-        return { name: 'Marcus', isDeveloper: true, isHapiPassionate: 'YEEEEAHHH' }
+        return {
+          name: 'Marcus',
+          isDeveloper: true,
+          isHapiPassionate: 'YEEEEAHHH'
+        }
       }
     })
 
+    // these must match the route you want to test
     const injectOptions = {
       method: 'GET',
       url: '/'
     }
 
+    // wait for the response and the request to finish
     const response = await server.inject(injectOptions)
+
+    // alright, set your expectations :)
     expect(response.statusCode).to.equal(200)
 
     // shortcut to payload
     const payload = JSON.parse(response.payload)
     expect(payload.name).to.equal('Marcus')
+
+    // of course you can assign more “expect” statements
   })
 
   it('register the base plugin and inject a request', async () => {
