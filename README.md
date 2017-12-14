@@ -1,21 +1,21 @@
 [![Futureflix](https://futurestud.io/blog/content/images/2017/09/futureflix-movie.jpg)](http://learnhapi.com)
 
 # learn hapi — Starter Files
-This repository contains the **Futureflix Starter Kit** for the [learn hapi](http://learnhapi.com) learning path.
+This repository contains the **Futureflix Starter Kit** for the **[learn hapi](http://learnhapi.com)** learning path.
 
-You’ll implement Futureflix as a sample app while following the tutorials in this [hapi](https://hapijs.com) learning path.
+You’ll implement Futureflix as a sample app while following the tutorials in this hapi (hapi.js) learning path.
 
-At this point, the current project’s implementation is only available for enrolled students. If you’re part of the Future Studio University, you’ve access to the code, hosted on GitLab.
+The finished project’s implementation is only available for Future Students. If you’re part of the Future Studio University, you’ve access to the code (hosted on GitLab).
 
 
 ## Requirements
 The **Futureflix Starter Kit** has full support for `async/await` and therefore requires Node.js v8.x.
 
 - Node.js **v8.x** or later
-- NPM or Yarn to install the project’s dependencies
+- NPM/Yarn to install the project’s dependencies
 - [Vagrant](https://www.vagrantup.com/) or a [MongoDB](https://docs.mongodb.com/manual/installation/) instance on your machine
 
-Download the Futureflix Starter Kit in version `1.x` from GitHub’s release page if you want to run it with Node.js v6.x.
+Download the Futureflix Starter Kit in version [`1.x` from this repo’s release page](https://github.com/fs-opensource/futureflix-starter-kit/releases) if you want to run it with Node.js v6.x.
 
 Seems doable, huh? 😃
 
@@ -31,7 +31,7 @@ cd futureflix-starter-kit
 # install dependencies
 npm i
 
-# start Vagrant box
+# start the Vagrant box
 vagrant up
 
 # create your secrets.env file from secrets.env.example
