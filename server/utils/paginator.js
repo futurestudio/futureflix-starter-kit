@@ -1,45 +1,45 @@
 'use strict'
 
 class Paginator {
-  constructor (request, totalCount, limit = 8) {
-    const pageCount = Math.ceil(totalCount / limit)
-    const page = this.getPage(request)
+  constructor (request, totalCount, perPage = 8) {
+    const lastPage = Math.ceil(totalCount / perPage)
+    const currentPage = this.getCurrentPage(request)
 
-    const previous = this.getPrevious(request, page)
-    const next = this.getNext(request, page, pageCount)
+    const previous = this.getPrevious(request, currentPage)
+    const next = this.getNext(request, currentPage, lastPage)
 
     return {
-      page,
-      totalCount,
-      pageCount,
+      currentPage,
+      total: totalCount,
+      lastPage,
       next,
       previous,
-      limit
+      perPage
     }
   }
 
-  getPage (request) {
+  getCurrentPage (request) {
     return parseFloat(request.params.page) || 1
   }
 
-  getNext (request, page, pageCount) {
+  getNext (request, currentPage, lastPage) {
     // return if current page is the last one, there's no more
-    if (page === pageCount) {
+    if (currentPage === lastPage) {
       return
     }
 
     const url = this.getUrlWithoutTrailingPage(request)
-    return this.composeUrlWithPage(url, page + 1)
+    return this.composeUrlWithPage(url, currentPage + 1)
   }
 
-  getPrevious (request, page) {
+  getPrevious (request, currentPage) {
     // return if current page is the first one, there's no zero :)
-    if (page === 1) {
+    if (currentPage === 1) {
       return
     }
 
     const url = this.getUrlWithoutTrailingPage(request)
-    return this.composeUrlWithPage(url, page - 1)
+    return this.composeUrlWithPage(url, currentPage - 1)
   }
 
   getUrlWithoutTrailingPage (request) {
