@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0 — 2017-12-xx (soon)
+## 2.0.0 — 2017-12-15
 
 * `add` thank you section in readme
 * `update` readme: add Node.js v8.x requirement, link to download for previous version
