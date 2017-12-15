@@ -7,3 +7,6 @@ node_js:
 
 services:
   - mongodb
+
+env:
+  - DATABASE=mongodb://localhost/futureflix
