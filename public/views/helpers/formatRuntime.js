@@ -8,5 +8,9 @@ module.exports = runtime => {
   const minutes = runtime % 60
   const hours = Math.floor(runtime / 60)
 
-  return `${hours}h ${minutes}min`
+  if (hours > 0) {
+    return `${hours}h ${minutes}min`
+  }
+
+  return `${minutes}min`
 }

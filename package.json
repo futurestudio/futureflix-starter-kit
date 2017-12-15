@@ -1,7 +1,7 @@
 {
   "name": "futureflix",
-  "description": "Netflix like streaming platform — Future Studio Sample App",
-  "version": "1.3.1",
+  "description": "Netflix like streaming platform — learnhapi.com",
+  "version": "2.0.0-rc.1",
   "author": "Future Studio <info@futurestud.io>",
   "bugs": {
     "url": "https://github.com/fs-opensource/futureflix-starter-kit/issues"
@@ -21,32 +21,34 @@
     }
   ],
   "dependencies": {
-    "axios": "~0.17.0",
-    "boom": "~5.2.0",
+    "axios": "~0.17.1",
+    "boom": "~7.1.1",
     "dotenv": "~4.0.0",
-    "handlebars": "~4.0.11",
-    "hapi": "~16.6.2",
-    "hoek": "~4.2.0",
+    "handlebars": "~4.0.10",
+    "handlebars-helper-repeat": "~1.0.0",
+    "hapi": "~17.1.1",
+    "hoek": "~5.0.2",
     "html-to-text": "~3.3.0",
-    "inert": "~4.2.1",
-    "joi": "~10.6.0",
-    "listr": "~0.12.0",
+    "inert": "~5.0.1",
+    "joi": "~13.0.2",
+    "listr": "~0.13.0",
     "lodash": "~4.17.4",
     "mongoose": "~4.10.8",
     "mongoose-simple-random": "~0.4.1",
-    "vision": "~4.1.1"
+    "vision": "~5.2.0"
   },
   "devDependencies": {
-    "code": "~4.1.0",
+    "code": "~5.1.2",
     "eslint-config-standard": "~10.2.1",
     "eslint-plugin-import": "~2.8.0",
     "eslint-plugin-node": "~5.2.1",
     "eslint-plugin-promise": "~3.6.0",
     "eslint-plugin-standard": "~3.0.1",
-    "lab": "~14.3.1"
+    "lab": "~15.1.2",
+    "prettier": "~1.9.2"
   },
   "engines": {
-    "node": ">= 6.0"
+    "node": ">= 8.9.0"
   },
   "homepage": "https://github.com/fs-opensource/futureflix-starter-kit",
   "keywords": [
@@ -54,10 +56,12 @@
     "hapi",
     "hapi.js",
     "mongodb",
+    "mongoose",
     "node",
     "node.js",
     "tutorial",
-    "tutorials"
+    "tutorials",
+    "bulma"
   ],
   "license": "MIT",
   "private": true,
@@ -67,7 +71,9 @@
   },
   "scripts": {
     "cleanup": "node ./data/load-sample-data.js --destroy",
+    "setup": "npm run pumpitup",
     "pumpitup": "node ./data/load-sample-data.js",
-    "test": "lab --assert code --leaks --coverage"
+    "test": "lab --assert code --leaks --coverage",
+    "lint": "./node_modules/eslint/bin/eslint.js . --fix --ext .js"
   }
 }

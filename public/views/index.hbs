@@ -43,14 +43,15 @@
     }
 </style>
 
-{{#movie}}
 <section class="hero is-dark is-bold is-fullheight">
 
-    {{> movies/hero }}
+  <div class="hero-head">
+      {{> hero-header}}
+  </div>
+
+    {{> hero-movies-shows movie }}
 
 </section>
-{{/movie}}
-
 
 <section class="section">
     <div class="container">

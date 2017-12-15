@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure(2) do |config|
+Vagrant.configure("2") do |config|
   # search for boxes at https://atlas.hashicorp.com/search
   config.vm.box = "ubuntu/xenial64"
 
@@ -13,14 +13,14 @@ Vagrant.configure(2) do |config|
   # MongoDB
   config.vm.network :forwarded_port, guest: 27017, host: 27017
   # Redis
-  config.vm.network "forwarded_port", guest: 6379, host: 6379
+  config.vm.network :forwarded_port, guest: 6379, host: 6379
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network :private_network, ip: "192.168.33.10"
 
   # Provisioning
-  config.vm.provision "shell", inline: <<-SHELL
+  config.vm.provision :shell, inline: <<-SHELL
     # Add MongoDB Source
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 
@@ -55,12 +55,17 @@ Vagrant.configure(2) do |config|
     sudo systemctl enable mongodb
 
     # Redis, all in one
+    # install
     sudo add-apt-repository -y ppa:chris-lea/redis-server
     sudo apt-get update
     sudo apt-get install -y redis-server
+
+    # config
     sudo cp /etc/redis/redis.conf /etc/redis/redis.conf.old
     sudo cat /etc/redis/redis.conf.old | grep -v bind > /etc/redis/redis.conf
     sudo echo "bind 0.0.0.0" >> /etc/redis/redis.conf
+
+    ## start
     sudo update-rc.d redis-server defaults
     sudo systemctl restart redis-server
   SHELL

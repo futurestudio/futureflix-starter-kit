@@ -1,0 +1,37 @@
+<div class="hero-bg" style="background-image: url({{images.background}});"></div>
+<div class="shadow"></div>
+
+<div class="hero-body">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half">
+                <h1 class="title">
+                    <a href="/movies/{{ids.slug}}">
+                        {{title}}
+                    </a>
+                </h1>
+                {{#if tagline}}
+                <h2 class="subtitle has-text-grey-lighter">
+                    {{tagline}}
+                </h2>
+                {{/if}}
+
+                <p class="has-text-grey">
+                    {{year}} &bull;
+                    <span class="certification">{{certification}}</span> &bull; {{formatRuntime runtime}}
+                </p>
+                <p class="has-text-grey-lighter has-margin-top-1">
+                    {{overview}}
+                </p>
+                <p class="field">
+                    <a class="button add-to-watchlist has-margin-top-1">
+                        <span class="icon is-small has-text-primary">
+                            <i class="fa fa-plus"></i>
+                        </span>
+                        <span class="has-text-white-ter">Add to Watchlist</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,8 +2,8 @@
 
 const _ = require('lodash')
 
-exports.register = function (server, options, next) {
-  server.ext('onPreResponse', function (request, reply) {
+function register (server, options) {
+  server.ext('onPreResponse', (request, h) => {
     const response = request.response
 
     // rendering a view? then add the user object
@@ -11,25 +11,19 @@ exports.register = function (server, options, next) {
       response.source.context = response.source.context || {}
 
       if (request.auth.isAuthenticated && request.user.id) {
-          response.source.context.user = request.user
-          return reply.continue()
-
-        // add user object to response data and make it available to views
-        // return User.findById(request.user.id).then(function (user) {
-        //   response.source.context.user = user
-        //   return reply.continue()
-        // })
+        response.source.context.user = request.user
+        return h.continue
       }
     }
 
-    return reply.continue()
+    return h.continue
   })
 
   server.log('info', 'Plugin registered: add user model data to views')
-  next()
 }
 
-exports.register.attributes = {
+exports.plugin = {
   name: 'add-user-object-to-views',
-  version: '1.0.0'
+  version: '1.0.0',
+  register
 }

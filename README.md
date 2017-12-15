@@ -1,19 +1,21 @@
 [![Futureflix](https://futurestud.io/blog/content/images/2017/09/futureflix-movie.jpg)](http://learnhapi.com)
 
-# learn hapi — Starter Files
-This repository contains the **Futureflix Starter Kit** for the [learn hapi](http://learnhapi.com) learning path.
+# learn hapi — Starter Files &nbsp; [![Build Status](https://travis-ci.org/fs-opensource/futureflix-starter-kit.svg?branch=master)](https://travis-ci.org/fs-opensource/futureflix-starter-kit)
+This repository contains the **Futureflix Starter Kit** for the **[learn hapi](http://learnhapi.com)** learning path.
 
-You’ll implement Futureflix as a sample app while following the tutorials in this [hapi](https://hapijs.com) learning path.
+You’ll implement Futureflix as a sample app while following the tutorials in this hapi (hapi.js) learning path.
 
-At this point, the current project’s implementation is only available for enrolled students. If you’re part of the Future Studio University, you’ve access to the code, hosted on GitLab.
+The finished project’s implementation is only available for Future Students. If you’re part of the Future Studio University, you’ve access to the code (hosted on GitLab).
 
 
 ## Requirements
-To run the **Futureflix Starter Kit**, please install the following dependencies:
+The **Futureflix Starter Kit** uses hapi v17 and has full support for `async/await` and therefore requires Node.js v8.x.
 
-- Node.js v6.x or later
-- NPM or Yarn to install the project’s dependencies
+- Node.js **v8.x** or later
+- NPM/Yarn to install the project’s dependencies
 - [Vagrant](https://www.vagrantup.com/) or a [MongoDB](https://docs.mongodb.com/manual/installation/) instance on your machine
+
+Download the Futureflix Starter Kit in version [`1.x` from this repo’s release page](https://github.com/fs-opensource/futureflix-starter-kit/releases) if you want to run it with Node.js v6.x.
 
 Seems doable, huh? 😃
 
@@ -29,7 +31,7 @@ cd futureflix-starter-kit
 # install dependencies
 npm i
 
-# start Vagrant box
+# start the Vagrant box
 vagrant up
 
 # create your secrets.env file from secrets.env.example
@@ -49,16 +51,19 @@ The starter kit doesn’t contain any logging. If you don’t see any errors whi
 
 
 ## Getting Help
-At this point, there’s no Slack channel or support group. If you need help with your implementation, please use email. We’re active on emails and reply as soon as possible.
-
-This repository accompanies you with the **Futureflix Starter Kit** and is not meant to be a support channel.
+At this point, there’s no Slack channel or support group. If you need help with your implementation, please email us. We’re active on emails and reply as soon as possible.
 
 
 ## Sending Pull Requests
 In case you found a different way to implement a feature, we’re happy to hear about it! Within the videos we’re using the code of this repository and want to keep it as close as possible.
 
-It’s unlikely that we accept a pull request with functionality changes.
-
 Error fixes and additional explanations are always welcome. If you find something, we absolutely appreciate your pull request.
 
 Make it rock!
+
+## Thank You with a Hug!
+It’s great to see you exploring this repository. Really! Dig through the code and hopefully you’ll take wins away ❤️
+
+### Sample data from trakt.tv
+Movie and TV show sample data for Futureflix comes from [trakt.tv](https://trakt.tv/). Track your progress on watched movies and shows, never forget where you left off a week ago! Trakt is a nice platform with dozens of apps for any client. 
+We’re not payed to say that 😅

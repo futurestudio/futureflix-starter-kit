@@ -1,25 +1,19 @@
 'use strict'
 
-const Hoek = require('hoek')
-const Boom = require('boom')
-
-exports.register = (server, options, next) => {
+async function register (server, options) {
   // declare dependencies to hapi-auth-* plugins
-  server.register([
+  await server.register([
     // register hapi-auth-* plugins here
-  ], err => {
-    Hoek.assert(!err, 'Cannot register authentication plugins')
+  ])
 
-    /**
-     * Register cookie-based session auth to remember
-     * the logged in user
-     */
-
-    next()
-  })
+  /**
+   * Register cookie-based session auth to remember
+   * the logged in user
+   */
 }
 
-exports.register.attributes = {
+exports.plugin = {
   name: 'authentication',
-  version: '1.0.0'
+  version: '1.0.0',
+  register
 }

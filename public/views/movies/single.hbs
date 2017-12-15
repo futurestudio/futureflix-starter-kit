@@ -29,7 +29,11 @@
 {{#movie}}
 <section class="hero is-dark is-bold is-medium">
 
-    {{> movies/hero }}
+    <div class="hero-head">
+        {{> hero-header user=../user}}
+    </div>
+
+    {{> hero-movies-shows }}
 
 </section>
 
