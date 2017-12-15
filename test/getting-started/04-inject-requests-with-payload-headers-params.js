@@ -57,21 +57,26 @@ describe('requests with payload, headers and params,', () => {
       method: 'GET',
       path: '/',
       handler: request => {
-        return request.headers
+        if (request.headers['x-custom-header']) {
+          return {
+            a: 'different object',
+            based: 'on the request headers'
+          }
+        }
       }
     })
 
-    const headers = { 'x-custom-header': 'my-funky-value' }
     const injectOptions = {
       method: 'GET',
       url: '/',
-      headers
+      headers: { 'x-custom-header': 'my-funky-value' }
     }
 
     const response = await server.inject(injectOptions)
     const payload = JSON.parse(response.payload || {})
 
-    expect(payload['x-custom-header']).to.equal(headers['x-custom-header'])
+    expect(payload.a).to.exist()
+    expect(payload.based).to.exist()
   })
 
   it('injects query params', async () => {
