@@ -1,5 +1,8 @@
 'use strict'
 
+const _ = require('lodash')
+const Querystring = require('querystring')
+
 class Paginator {
   constructor (request, totalCount, perPage = 8) {
     const lastPage = Math.ceil(totalCount / perPage)
@@ -22,7 +25,7 @@ class Paginator {
   }
 
   getCurrentPage (request) {
-    return parseFloat(request.params.page) || 1
+    return parseFloat(request.query.page) || 1
   }
 
   getNext (request, currentPage, lastPage) {
@@ -31,8 +34,7 @@ class Paginator {
       return
     }
 
-    const url = this.getUrlWithoutTrailingPage(request)
-    return this.composeUrlWithPage(url, currentPage + 1)
+    return this.composeUrl(request, currentPage + 1)
   }
 
   getPrevious (request, currentPage) {
@@ -41,27 +43,18 @@ class Paginator {
       return
     }
 
-    const url = this.getUrlWithoutTrailingPage(request)
-    return this.composeUrlWithPage(url, currentPage - 1)
+    return this.composeUrl(request, currentPage - 1)
   }
 
-  getUrlWithoutTrailingPage (request) {
-    const url = request.url.path
-
-    // there's no "/page/" part in the URL (like initial overview page), then just return the current url
-    if (!this.hasPageParam(url)) {
-      return `${url}/page`
-    }
-
-    return url.substring(0, url.lastIndexOf('/'))
+  hasPage (request) {
+    return !_.isNil(request.query.page)
   }
 
-  hasPageParam (url) {
-    return url.includes('/page/')
-  }
+  composeUrl (request, page) {
+    const queryParams = Object.assign(request.query, { page })
+    const query = Querystring.stringify(queryParams)
 
-  composeUrlWithPage (url, page) {
-    return `${url}/${page}`
+    return `${request.path}?${query}`
   }
 }
 
