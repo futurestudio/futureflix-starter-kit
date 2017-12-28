@@ -17,7 +17,7 @@ const Handler = {
       const pagination = new Paginator(request, showCount)
 
       if (pagination.currentPage > pagination.lastPage) {
-        return h.view('404')
+        return h.view('404').code(404)
       }
 
       const shows = await Show.find()
