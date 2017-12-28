@@ -1,10 +1,19 @@
 'use strict'
 
 const _ = require('lodash')
+const Boom = require('boom')
 const Querystring = require('querystring')
 
 class Paginator {
   constructor (request, totalCount, perPage = 8) {
+    if (!request) {
+      throw new Boom('Request object required as first parameter in paginator')
+    }
+
+    if (!totalCount) {
+      throw new Boom('Total count required as second parameter in paginator')
+    }
+
     const lastPage = Math.ceil(totalCount / perPage)
     const currentPage = this.getCurrentPage(request)
     const from = currentPage * perPage - perPage
@@ -51,10 +60,12 @@ class Paginator {
   }
 
   composeUrl (request, page) {
+    const proxyProtocol = request.headers && request.headers['x-forwarded-for']
+    const protocol = proxyProtocol || request.server.info.protocol || 'http'
     const queryParams = Object.assign(request.query, { page })
     const query = Querystring.stringify(queryParams)
 
-    return `${request.path}?${query}`
+    return `${protocol}://${request.info.host}${request.path}?${query}`
   }
 }
 
