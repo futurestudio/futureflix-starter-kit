@@ -4,7 +4,6 @@
             Movies
         </h1>
 
-
         {{! grid modifier: is-6 increases the column gap and is-multiline adds prober breaks to the grid}}
         <div class="columns is-6 is-variable is-multiline content">
             {{#each movies}}
@@ -19,6 +18,7 @@
             {{/each}}
         </div>
 
+        {{> pagination}}
 
     </div>
 </div>

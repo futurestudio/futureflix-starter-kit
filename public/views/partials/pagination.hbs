@@ -1,21 +1,20 @@
 {{#pagination}}
 
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        {{#if previous}}
-            <a class="pagination-previous" href="{{previous}}">Previous</a>
-        {{/if}}
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+    {{#if previous}}
+    <a class="pagination-previous has-white-background" href="{{previous}}">Previous</a>
+    {{/if}} {{#if next}}
+    <a class="pagination-next has-white-background" href="{{next}}">Next</a>
+    {{/if}}
 
-        {{#if next}}
-            <a class="pagination-next" href="{{next}}">Next</a>
-        {{/if}}
-
-        <ul class="pagination-list">
-            {{#repeat lastPage start=1 }}
-                <li>
-                    <span class="pagination-link{{#isEqual @index currentPage}} is-current{{/isEqual}}" aria-current="page" aria-label="{{#isEqual @index currentPage}}Page {{else}}Goto page {{@index}}{{/isEqual}}">{{@index}}</span>
-                </li>
-            {{/repeat}}
-        </ul>
-    </nav>
+    <ul class="pagination-list">
+        {{#repeat lastPage start=1 }}
+        <li>
+            <span class="pagination-link has-white-background {{#isEqual @index currentPage}} is-current{{/isEqual}}" aria-current="page"
+                aria-label="{{#isEqual @index currentPage}}Page {{else}}Goto page {{@index}}{{/isEqual}}">{{@index}}</span>
+        </li>
+        {{/repeat}}
+    </ul>
+</nav>
 
 {{/pagination}}
