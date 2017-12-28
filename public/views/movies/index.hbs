@@ -7,14 +7,14 @@
         {{! grid modifier: is-6 increases the column gap and is-multiline adds prober breaks to the grid}}
         <div class="columns is-6 is-variable is-multiline content">
             {{#each movies}}
-            <div class="column is-one-quarter has-margin-bottom-3">
-                <a href="/movies/{{ids.slug}}">
-                    <img src="{{images.poster}}">
-                    <strong>
-                        {{title}}
-                    </strong>
-                </a>
-            </div>
+                <div class="column is-one-quarter has-margin-bottom-3">
+                    <a href="/movies/{{ids.slug}}">
+                        <img src="{{images.poster}}">
+                        <strong>
+                            {{title}}
+                        </strong>
+                    </a>
+                </div>
             {{/each}}
         </div>
 

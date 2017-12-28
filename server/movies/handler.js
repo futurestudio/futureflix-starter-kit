@@ -3,7 +3,6 @@
 const Joi = require('joi')
 const Path = require('path')
 const Movie = require(Path.resolve(__dirname, '..', 'models')).Movie
-const Paginator = require(Path.resolve(__dirname, '..', 'utils', 'paginator'))
 
 const Handler = {
   index: {
@@ -13,21 +12,9 @@ const Handler = {
       }
     },
     handler: async (request, h) => {
-      const showCount = await Movie.count()
-      const pagination = new Paginator(request, showCount)
-
-      if (pagination.currentPage > pagination.lastPage) {
-        return h.view('404').code(404)
-      }
-
       const movies = await Movie.find()
-        .skip(pagination.from)
-        .limit(pagination.perPage)
 
-      return h.view('movies/index', {
-        movies,
-        pagination
-      })
+      return h.view('movies/index', { movies })
     }
   },
 
