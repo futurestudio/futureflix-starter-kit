@@ -60,7 +60,7 @@ class Paginator {
   }
 
   composeUrl (request, page) {
-    const proxyProtocol = request.headers && request.headers['x-forwarded-for']
+    const proxyProtocol = request.headers && request.headers['x-forwarded-proto']
     const protocol = proxyProtocol || request.server.info.protocol || 'http'
     const queryParams = Object.assign(request.query, { page })
     const query = Querystring.stringify(queryParams)
