@@ -68,7 +68,7 @@ describe('inject requests with server.inject,', () => {
   it('register the base plugin and inject a request', async () => {
     const server = new Hapi.Server()
 
-    const basePluginPath = Path.resolve(__dirname, '..', '..', 'server', 'base')
+    const basePluginPath = Path.resolve(__dirname, '..', '..', 'web', 'base')
     await server.register([
       {
         plugin: require('inert')
