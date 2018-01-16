@@ -1,16 +1,20 @@
 'use strict'
 
 module.exports = runtime => {
-  if (!runtime || !runtime > 0) {
+  if (!hasRuntime(runtime)) {
     return ''
+  }
+
+  if (runtime <= 60) {
+    return `${runtime}min`
   }
 
   const minutes = runtime % 60
   const hours = Math.floor(runtime / 60)
 
-  if (hours > 0) {
-    return `${hours}h ${minutes}min`
-  }
+  return `${hours}h ${minutes}min`
+}
 
-  return `${minutes}min`
+function hasRuntime (runtime) {
+  return runtime && runtime > 0
 }
