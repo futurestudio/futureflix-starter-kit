@@ -37,21 +37,10 @@
         position: relative;
     }
 
-    .hero.is-dark .nav-item a:not(.button),
-    .hero.is-dark a.nav-item {
-        color: rgba(255, 255, 255, .8)
-    }
+    .hero.is-dark h2 {}
 </style>
 
-<section class="hero is-dark is-bold is-fullheight">
-
-  <div class="hero-head">
-      {{> hero-header}}
-  </div>
-
-    {{> hero-movies-shows movie }}
-
-</section>
+{{> hero-movies-shows movieOrShow=movie user=user isHeight='is-fullheight' keepMeSafeFromCsrf=keepMeSafeFromCsrf}}
 
 <section class="section">
     <div class="container">
@@ -64,11 +53,11 @@
     <div class="container">
         <div class="columns content">
             {{#each movies}}
-            <div class="column">
-                <a href="/movies/{{ids.slug}}">
-                    <img src="{{images.poster}}" width="">
-                </a>
-            </div>
+                <div class="column">
+                    <a href="/movies/{{ids.slug}}">
+                        <img src="{{images.poster}}" width="">
+                    </a>
+                </div>
             {{/each}}
         </div>
     </div>
@@ -85,11 +74,11 @@
     <div class="container">
         <div class="columns content">
             {{#each shows}}
-            <div class="column">
-                <a href="/shows/{{ids.slug}}">
-                    <img src="{{images.poster}}" width="">
-                </a>
-            </div>
+                <div class="column">
+                    <a href="/shows/{{ids.slug}}">
+                        <img src="{{images.poster}}" width="">
+                    </a>
+                </div>
             {{/each}}
         </div>
     </div>

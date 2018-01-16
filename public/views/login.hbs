@@ -11,17 +11,13 @@
 <div class="columns content">
     <div class="column is-half is-offset-one-quarter">
         <h1 class="title">
-            <img src="/images/star.svg" alt="">
-            Log in to Futureflix
+            <img src="/images/star.svg" alt=""> Log in to Futureflix
         </h1>
         <p class="subtitle">
-            Access and update your data.
+            Access and update your personal account.
         </p>
 
         <hr>
-
-        <h4 class="title is-4">Log in to your personal account</h4>
-
         {{#if errormessage}}
             <hr>
             <p class="error">
@@ -40,10 +36,8 @@
                 </label>
                 <p class="control has-icons-left has-icons-right">
                     <input class="input {{#if errors.email}}is-danger{{else}}{{#if
-                        email}}is-success{{/if}}{{/if}}"
-                           type="email" placeholder="Your personal email address"
-                           id="email" name="email"
-                           value="{{email}}">
+                        email}}is-success{{/if}}{{/if}}" type="email" placeholder="Your personal email address" id="email"
+                        name="email" value="{{email}}">
                     <span class="icon is-small is-left">
                         <i class="fa fa-envelope"></i>
                     </span>
@@ -71,9 +65,7 @@
                 </div>
 
                 <p class="control has-icons-left has-icons-right">
-                    <input class="input {{#if errors.password}}is-danger{{/if}}" type="password"
-                           placeholder="Your password"
-                           id="password" name="password">
+                    <input class="input {{#if errors.password}}is-danger{{/if}}" type="password" placeholder="Your password" id="password" name="password">
                     <span class="icon is-small is-left">
                         <i class="fa fa-lock"></i>
                     </span>

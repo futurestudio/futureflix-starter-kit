@@ -1,22 +1,21 @@
-<nav class="nav has-shadow">
-    <div class="nav-left">
-        <a class="nav-item" href="/">
-            <img src="/images/aperture-white.svg" alt=""> &nbsp; Futureflix
-        </a>
+<nav class="navbar is-dark is-transparent" role="navigation" aria-label="main navigation">
+    <div class="container">
+
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/images/aperture-white.svg" alt=""> &nbsp; Futureflix
+            </a>
+
+            <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+            <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+            <button class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        {{> header-nav isHero=true}}
+
     </div>
-
-    <div class="nav-center nav-menu">
-        <a class="nav-item is-tab" href="/movies">
-            Movies
-        </a>
-        <a class="nav-item is-tab" href="/shows">
-            TV Shows
-        </a>
-        <a class="nav-item is-tab" href="/discover">
-            Discover
-        </a>
-    </div>
-
-    {{> header-nav-right }}
-
 </nav>

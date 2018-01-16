@@ -1,0 +1,41 @@
+<div class="columns">
+    <div class="column is-8 is-offset-2 content">
+
+        {{#if errors}}
+            <div class="notification is-warning">
+                {{errors.keyword.message}}
+            </div>
+        {{/if}}
+
+        {{#each results}}
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="{{ids.slug}}">
+                                <figure class="image is-48x48">
+                                    <img src="{{images.poster}}" alt="{{title}}" width="64" height="64">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">
+                                <a href="{{#if isMovie}}/movies/{{else}}/shows/{{/if}}{{ids.slug}}">{{title}}</a>
+                            </p>
+                            <p class="subtitle is-6 has-text-grey">
+                                {{year}} &bull; {{formatRuntime runtime}}
+                            </p>
+                            <p class="subtitle is-6">{{tagline}}</p>
+
+                            <div class="tags">
+                                {{#each genres}}
+                                    <span class="tag">{{this}}</span>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
