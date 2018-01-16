@@ -3,8 +3,8 @@
 const _ = require('lodash')
 const Boom = require('boom')
 const Path = require('path')
-const Movie = require(Path.resolve(__dirname, '..', 'models')).Movie
-const Show = require(Path.resolve(__dirname, '..', 'models')).Show
+const Movie = require(Path.resolve(__dirname, '..', '..', 'models')).Movie
+const Show = require(Path.resolve(__dirname, '..', '..', 'models')).Show
 
 const Handler = {
   index: {

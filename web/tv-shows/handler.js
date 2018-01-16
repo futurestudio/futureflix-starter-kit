@@ -2,8 +2,8 @@
 
 const Joi = require('joi')
 const Path = require('path')
-const Show = require(Path.resolve(__dirname, '..', 'models')).Show
-const Paginator = require(Path.resolve(__dirname, '..', 'utils', 'paginator'))
+const Show = require(Path.resolve(__dirname, '..', '..', 'models')).Show
+const Paginator = require(Path.resolve(__dirname, '..', '..', 'utils', 'paginator'))
 
 const Handler = {
   index: {

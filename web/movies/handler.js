@@ -2,7 +2,7 @@
 
 const Joi = require('joi')
 const Path = require('path')
-const Movie = require(Path.resolve(__dirname, '..', 'models')).Movie
+const Movie = require(Path.resolve(__dirname, '..', '..', 'models')).Movie
 
 const Handler = {
   index: {
