@@ -1,4 +1,4 @@
-[![Futureflix](https://futurestud.io/blog/content/images/2017/09/futureflix-movie.jpg)](http://learnhapi.com)
+[![Futureflix](https://futurestud.io/blog/content/images/2018/01/futureflix-teaser.jpg)](http://learnhapi.com)
 
 # learn hapi — Starter Files &nbsp; [![Build Status](https://travis-ci.org/fs-opensource/futureflix-starter-kit.svg?branch=master)](https://travis-ci.org/fs-opensource/futureflix-starter-kit)
 This repository contains the **Futureflix Starter Kit** for the **[learn hapi](http://learnhapi.com)** learning path.
