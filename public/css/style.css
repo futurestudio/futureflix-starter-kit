@@ -1,7 +1,7 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
 html {
-  background: hsl(210, 8%, 95%);
+  background: hsl(210, 17%, 95%);
 }
 
 body {
@@ -99,6 +99,31 @@ label.is-danger {
   border: none;
 }
 
+.hero .navbar-menu .search-input,
+.hero .navbar-menu .search-button {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: none;
+  color: #fff;
+}
+
+.hero .navbar-menu .search-input {
+  border-bottom-left-radius: 0 !important;
+}
+
+.hero .navbar-menu .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.hero .navbar-menu .search-button {
+  border-bottom-right-radius: 0 !important;
+}
+
+.hero .navbar-menu .search-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 /**
  * Bulma Helpers
  *
@@ -116,6 +141,14 @@ label.is-danger {
 
 .has-margin-top-1 {
   margin-top: 1rem;
+}
+
+.has-margin-top-2 {
+  margin-top: 2rem;
+}
+
+.has-margin-top-3 {
+  margin-top: 3rem;
 }
 
 .has-margin-bottom-1 {
