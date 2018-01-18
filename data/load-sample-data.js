@@ -10,7 +10,7 @@ const Dotenv = require('dotenv')
 Dotenv.config({ path: Path.resolve(__dirname, '..', 'secrets.env') })
 
 // import models
-const Models = require(Path.resolve(__dirname, '..', 'server', 'models'))
+const Models = require(Path.resolve(__dirname, '..', 'models'))
 const Show = Models.Show
 const Movie = Models.Movie
 const Season = Models.Season
