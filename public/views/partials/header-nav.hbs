@@ -83,7 +83,11 @@
             </div>
             <a class="navbar-item" href="/logout">
                 <figure class="image is-16x16" style="margin-right: 8px;">
-                    <img src="/images/log-out.svg" alt="">
+                    {{#if isHero}}
+                        <img src="/images/log-out-white.svg" alt="">
+                    {{else}}
+                        <img src="/images/log-out.svg" alt="">
+                    {{/if}}
                 </figure>
                 Logout
             </a>
