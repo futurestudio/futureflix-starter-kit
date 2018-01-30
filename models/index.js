@@ -15,6 +15,7 @@ Mongoose.connect(process.env.DATABASE || 'mongodb://localhost/futureflix')
 // listen for connection errors and print the message
 Mongoose.connection.on('error', err => {
   console.error(`⚡️ 🚨 ⚡️ 🚨 ⚡️ 🚨 ⚡️ 🚨 ⚡️ 🚨  → ${err.message}`)
+  throw err
 })
 
 // use ES6 shorthands: "propertyName: variableName" equals "propertyName"
