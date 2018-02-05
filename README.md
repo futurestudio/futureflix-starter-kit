@@ -58,7 +58,7 @@ The starter kit doesn’t contain any logging. If you don’t see any errors whi
 
 
 ## Getting Help
-At this point, there’s no Slack channel or support group. If you need help with your implementation, please email us. We’re active on emails and reply as soon as possible.
+At this point, there’s no Slack channel or support group. If you need help with your implementation, please email us or send a tweet [@futurestud_io](https://twitter.com/futurestud_io). We’re active on emails and reply as soon as possible.
 
 
 ## Sending Pull Requests
