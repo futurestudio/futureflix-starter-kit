@@ -21,31 +21,32 @@
     }
   ],
   "dependencies": {
-    "axios": "~0.17.1",
+    "axios": "~0.18.0",
     "boom": "~7.1.1",
-    "dotenv": "~4.0.0",
+    "dotenv": "~5.0.0",
     "handlebars": "~4.0.10",
     "handlebars-helper-repeat": "~1.0.0",
-    "hapi": "~17.1.1",
-    "hoek": "~5.0.2",
+    "hapi": "~17.2.0",
+    "hoek": "~5.0.3",
     "html-to-text": "~3.3.0",
-    "inert": "~5.0.1",
-    "joi": "~13.0.2",
+    "inert": "~5.1.0",
+    "joi": "~13.1.2",
     "listr": "~0.13.0",
-    "lodash": "~4.17.4",
+    "lodash": "~4.17.5",
     "mongoose": "~4.10.8",
     "mongoose-simple-random": "~0.4.1",
-    "vision": "~5.2.0"
+    "vision": "~5.3.1"
   },
   "devDependencies": {
-    "code": "~5.1.2",
-    "eslint-config-standard": "~10.2.1",
+    "code": "~5.2.0",
+    "cross-env": "~5.1.3",
+    "eslint-config-standard": "~11.0.0",
     "eslint-plugin-import": "~2.8.0",
-    "eslint-plugin-node": "~5.2.1",
+    "eslint-plugin-node": "~6.0.0",
     "eslint-plugin-promise": "~3.6.0",
     "eslint-plugin-standard": "~3.0.1",
-    "lab": "~15.1.2",
-    "prettier": "~1.9.2"
+    "lab": "~15.2.2",
+    "prettier": "~1.10.2"
   },
   "engines": {
     "node": ">= 8.9.0"
@@ -73,7 +74,7 @@
     "cleanup": "node ./data/load-sample-data.js --destroy",
     "setup": "npm run pumpitup",
     "pumpitup": "node ./data/load-sample-data.js",
-    "test": "NODE_ENV=test lab --assert code --leaks --coverage --lint",
+    "test": "cross-env NODE_ENV=test lab --assert code --leaks --coverage --lint",
     "lint": "./node_modules/eslint/bin/eslint.js . --fix --ext .js"
   }
 }
