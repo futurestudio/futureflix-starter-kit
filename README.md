@@ -1,13 +1,14 @@
 [![Futureflix](https://futurestud.io/blog/content/images/2018/01/futureflix-teaser.jpg)](http://learnhapi.com)
 
-
 [Demo](https://futureflix.space) &nbsp;&middot;&nbsp;
 [Setup](https://github.com/fs-opensource/futureflix-starter-kit#setup-and-run) &nbsp;&middot;&nbsp;
 [Hugs](https://github.com/fs-opensource/futureflix-starter-kit#thank-you-with-a-hug)
 
 ---
 
+
 # learn hapi — Starter Files &nbsp; [![Build Status](https://travis-ci.org/fs-opensource/futureflix-starter-kit.svg?branch=master)](https://travis-ci.org/fs-opensource/futureflix-starter-kit)
+
 This repository contains the **Futureflix Starter Kit** for the **[learn hapi](http://learnhapi.com)** learning path.
 
 You’ll implement Futureflix as a sample app while following the tutorials in this hapi (hapi.js) learning path.
@@ -16,9 +17,13 @@ The finished project’s implementation is only available for Future Students. I
 
 
 ## Requirements
-> Node.js v8.x with `async/await` support for hapi v17
+> Node.js v8.x with `async/await`
+>
+> This version of Futureflix uses **hapi v17**. For hapi v16, use a [`1.x` release](https://github.com/fs-opensource/futureflix-starter-kit/releases)
 
-The **Futureflix Starter Kit** uses hapi v17 and has full support for `async/await` and therefore requires Node.js v8.x.
+The Futureflix Starter Kit uses hapi v17 and has full `async/await` support.
+
+**Requirements**
 
 - Node.js **v8.x** or later
 - NPM/Yarn to install the project’s dependencies
@@ -62,6 +67,8 @@ The starter kit doesn’t contain any logging. If you don’t see any errors whi
 ## Getting Help
 At this point, there’s no Slack channel or support group. If you need help with your implementation, please email us or send a tweet [@futurestud_io](https://twitter.com/futurestud_io). We’re active on emails and reply as soon as possible.
 
+At this point, there’s no Slack channel or support group. If you need help with your implementation, please email us. We’re active on emails and reply as soon as possible.
+
 
 ## Sending Pull Requests
 In case you found a different way to implement a feature, we’re happy to hear about it! Within the videos we’re using the code of this repository and want to keep it as close as possible.
@@ -70,9 +77,11 @@ Error fixes and additional explanations are always welcome. If you find somethin
 
 Make it rock!
 
+
 ## Thank You with a Hug!
 It’s great to see you exploring this repository. Really! Dig through the code and hopefully you’ll take wins away ❤️
 
+
 ### Sample data from trakt.tv
-Movie and TV show sample data for Futureflix comes from [trakt.tv](https://trakt.tv/). Track your progress on watched movies and shows, never forget where you left off a week ago! Trakt is a nice platform with dozens of apps for any client. 
+Movie and TV show sample data for Futureflix comes from [trakt.tv](https://trakt.tv/). Track your progress on watched movies and shows, never forget where you left off a week ago! Trakt is a nice platform with dozens of apps for any client.
 We’re not payed to say that 😅
