@@ -2,7 +2,7 @@
 <div align="center">
   <br/>
   <a href="http://learnhapi.com">
-    <img src="https://futurestud.io/blog/content/images/2018/01/futureflix-teaser.jpg" width="600" />
+    <img src="https://futurestud.io/blog/content/images/2018/01/futureflix-teaser.jpg" />
   </a>
   <br/>
   <br/>
@@ -16,9 +16,8 @@
   <p>
     <a href="https://futureflix.space"><strong>Demo</strong></a> ·
     <a href="#setup-and-run"><strong>Setup</strong></a> ·
-    <a href="#thank-you-with-a-hug"><strong>Hugs</strong></a> ·
+    <a href="#thank-you-with-a-hug"><strong>Hugs</strong></a>
   </p>
-  <br/>
   <br/>
   <br/>
   <p>
@@ -27,7 +26,7 @@
     </a>
   </p>
   <p>
-    <em>Follow <a href="http://twitter.com/marcuspoehls">@marcuspoehls</a> Futureflix updates!</em>
+    <em>Follow <a href="http://twitter.com/marcuspoehls">@marcuspoehls</a> for Futureflix updates!</em>
   </p>
 </div>
 
