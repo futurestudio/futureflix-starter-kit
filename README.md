@@ -21,6 +21,9 @@
   <br/>
   <br/>
   <p>
+    <a href="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit">
+      <img src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit" style="max-width:100%;">
+    </a>
     <a href="https://travis-ci.org/fs-opensource/futureflix-starter-kit">
       <img src="https://travis-ci.org/fs-opensource/futureflix-starter-kit.svg?branch=master"/>
     </a>
