@@ -1,14 +1,41 @@
-[![Futureflix](https://futurestud.io/blog/content/images/2018/01/futureflix-teaser.jpg)](http://learnhapi.com)
 
-[Demo](https://futureflix.space) &nbsp;&middot;&nbsp;
-[Setup](https://github.com/fs-opensource/futureflix-starter-kit#setup-and-run) &nbsp;&middot;&nbsp;
-[Hugs](https://github.com/fs-opensource/futureflix-starter-kit#thank-you-with-a-hug)
+<div align="center">
+  <br/>
+  <a href="http://learnhapi.com">
+    <img src="https://futurestud.io/blog/content/images/2018/01/futureflix-teaser.jpg" />
+  </a>
+  <br/>
+  <br/>
+  <p>
+    Your starter kit for the <a href="http://learnhapi.com">learn hapi</a> learning path.
+    <br/>
+    You’ll implement a real-world app from zero to hero!
+  </p>
+  <br/>
+  <p>
+    <a href="https://futureflix.space"><strong>Demo</strong></a> ·
+    <a href="#setup-and-run"><strong>Setup</strong></a> ·
+    <a href="#thank-you-with-a-hug"><strong>Hugs</strong></a>
+  </p>
+  <br/>
+  <br/>
+  <p>
+    <a href="https://travis-ci.org/fs-opensource/futureflix-starter-kit">
+      <img src="https://travis-ci.org/fs-opensource/futureflix-starter-kit.svg?branch=master"/>
+    </a>
+    <a href="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit">
+      <img src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit" style="max-width:100%;">
+    </a>
+  </p>
+  <p>
+    <em>Follow <a href="http://twitter.com/marcuspoehls">@marcuspoehls</a> for Futureflix updates!</em>
+  </p>
+</div>
+
 
 ---
 
-
-# learn hapi — Starter Files &nbsp; [![Build Status](https://travis-ci.org/fs-opensource/futureflix-starter-kit.svg?branch=master)](https://travis-ci.org/fs-opensource/futureflix-starter-kit)
-
+# learn hapi — Starter Files
 This repository contains the **Futureflix Starter Kit** for the **[learn hapi](http://learnhapi.com)** learning path.
 
 You’ll implement Futureflix as a sample app while following the tutorials in this hapi (hapi.js) learning path.
