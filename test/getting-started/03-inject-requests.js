@@ -65,7 +65,7 @@ describe('inject requests with server.inject,', () => {
     // of course you can assign more “expect” statements
   })
 
-  it('register the base plugin and inject a request', async () => {
+  it('register the base plugin and inject a request', { timeout: 5000 }, async () => {
     const server = new Hapi.Server()
 
     const basePluginPath = Path.resolve(__dirname, '..', '..', 'web', 'base')
