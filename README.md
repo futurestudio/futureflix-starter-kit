@@ -26,9 +26,6 @@
     <a href="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit">
       <img src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit" style="max-width:100%;">
     </a>
-    <a href="http://learnhapi.com">
-      <img src="https://futurestud.io/images/badges/hapi-hero.svg" />
-    </a>
   </p>
   <p>
     <em>Follow <a href="http://twitter.com/marcuspoehls">@marcuspoehls</a> for Futureflix updates!</em>
