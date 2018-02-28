@@ -13,4 +13,6 @@ describe('getting started with hapi testing using lab,', () => {
   it.skip('lab considers this test as TOOD and skips it')
 
   it('always succeeds :)', () => {})
+
+  it('always succeeding with an increased timeout :)', { timeout: 5000 }, () => {})
 })
