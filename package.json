@@ -22,11 +22,11 @@
   ],
   "dependencies": {
     "axios": "~0.18.0",
-    "boom": "~7.1.1",
+    "boom": "~7.2.0",
     "dotenv": "~5.0.1",
     "handlebars": "~4.0.10",
     "handlebars-helper-repeat": "~1.0.0",
-    "hapi": "~17.2.0",
+    "hapi": "~17.2.1",
     "hoek": "~5.0.3",
     "html-to-text": "~3.3.0",
     "inert": "~5.1.0",
@@ -46,7 +46,7 @@
     "eslint-plugin-promise": "~3.6.0",
     "eslint-plugin-standard": "~3.0.1",
     "lab": "~15.3.0",
-    "prettier": "~1.11.0"
+    "prettier": "~1.11.1"
   },
   "engines": {
     "node": ">= 8.9.0"
