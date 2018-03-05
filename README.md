@@ -7,7 +7,7 @@
   <br/>
   <br/>
   <p>
-    Your starter kit for the <a href="http://learnhapi.com">“learn hapi”</a> learning path.
+    Your starter kit for the <a href="http://learnhapi.com"><strong>learn hapi</strong></a> learning path.
     <br/>
     You’ll implement a real-world app from zero to hero!
   </p>
