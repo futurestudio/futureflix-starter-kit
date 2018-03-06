@@ -33,7 +33,7 @@
     "joi": "~13.1.2",
     "listr": "~0.13.0",
     "lodash": "~4.17.5",
-    "mongoose": "~5.0.8",
+    "mongoose": "~5.0.9",
     "mongoose-simple-random": "~0.4.1",
     "vision": "~5.3.1"
   },
