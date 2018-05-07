@@ -112,3 +112,14 @@ It’s great to see you exploring this repository. Really! Dig through the code 
 ### Sample data from trakt.tv
 Movie and TV show sample data for Futureflix comes from [trakt.tv](https://trakt.tv/). Track your progress on watched movies and shows, never forget where you left off a week ago! Trakt is a nice platform with dozens of apps for any client.
 We’re not payed to say that 😅
+
+
+## License
+
+MIT © [Future Studio](https://futurestud.io)
+
+---
+
+> [futurestud.io](https://futurestud.io) &nbsp;&middot;&nbsp;
+> GitHub [@fs-opensource](https://github.com/fs-opensource/) &nbsp;&middot;&nbsp;
+> Twitter [@futurestud_io](https://twitter.com/futurestud_io)
