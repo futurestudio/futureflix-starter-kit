@@ -35,6 +35,8 @@
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/futurestudio/futureflix-starter-kit.svg)](https://greenkeeper.io/)
+
 # learn hapi — Starter Files
 This repository contains the **Futureflix Starter Kit** for the **[learn hapi](http://learnhapi.com)** learning path.
 
