@@ -20,11 +20,11 @@
   <br/>
   <br/>
   <p>
-    <a href="https://travis-ci.org/fs-opensource/futureflix-starter-kit">
-      <img src="https://travis-ci.org/fs-opensource/futureflix-starter-kit.svg?branch=master"/>
+    <a href="https://travis-ci.org/futurestudio/futureflix-starter-kit">
+      <img src="https://travis-ci.org/futurestudio/futureflix-starter-kit.svg?branch=master"/>
     </a>
-    <a href="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit">
-      <img src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/fs-opensource/futureflix-starter-kit" style="max-width:100%;">
+    <a href="https://snyk.io/test/github/futurestudio/futureflix-starter-kit">
+      <img src="https://snyk.io/test/github/futurestudio/futureflix-starter-kit/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/futurestudio/futureflix-starter-kit" style="max-width:100%;">
     </a>
   </p>
   <p>
@@ -46,7 +46,7 @@ The finished project’s implementation is only available for Future Students. I
 ## Requirements
 > Node.js v8.x with `async/await`
 >
-> This version of Futureflix uses **hapi v17**. For hapi v16, use a [`1.x` release](https://github.com/fs-opensource/futureflix-starter-kit/releases)
+> This version of Futureflix uses **hapi v17**. For hapi v16, use a [`1.x` release](https://github.com/futurestudio/futureflix-starter-kit/releases)
 
 The Futureflix Starter Kit uses hapi v17 and has full `async/await` support.
 
@@ -56,7 +56,7 @@ The Futureflix Starter Kit uses hapi v17 and has full `async/await` support.
 - NPM/Yarn to install the project’s dependencies
 - [Vagrant](https://www.vagrantup.com/) or a [MongoDB](https://docs.mongodb.com/manual/installation/) instance on your machine
 
-Download the Futureflix Starter Kit in version [`1.x` from this repo’s release page](https://github.com/fs-opensource/futureflix-starter-kit/releases) if you want to run it with Node.js v6.x.
+Download the Futureflix Starter Kit in version [`1.x` from this repo’s release page](https://github.com/futurestudio/futureflix-starter-kit/releases) if you want to run it with Node.js v6.x.
 
 Seems doable, huh? 😃
 
@@ -66,7 +66,7 @@ To run your own Futureflix instance, clone this repository, install the dependen
 
 ```bash
 # clone repository
-git clone https://github.com/fs-opensource/futureflix-starter-kit.git
+git clone https://github.com/futurestudio/futureflix-starter-kit.git
 cd futureflix-starter-kit
 
 # install dependencies
@@ -121,5 +121,5 @@ MIT © [Future Studio](https://futurestud.io)
 ---
 
 > [futurestud.io](https://futurestud.io) &nbsp;&middot;&nbsp;
-> GitHub [@fs-opensource](https://github.com/fs-opensource/) &nbsp;&middot;&nbsp;
+> GitHub [@futurestudio](https://github.com/futurestudio/) &nbsp;&middot;&nbsp;
 > Twitter [@futurestud_io](https://twitter.com/futurestud_io)
