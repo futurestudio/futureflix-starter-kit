@@ -15,7 +15,7 @@ Dotenv.config({ path: Path.resolve(__dirname, 'secrets.env') })
 // create new server instance and connection information
 const server = new Hapi.Server({
   host: 'localhost',
-  port: 3000
+  port: process.env.PORT || 3000
 })
 
 // register plugins, configure views and start the server instance
