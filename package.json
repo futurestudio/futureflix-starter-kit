@@ -35,7 +35,8 @@
     "lodash": "~4.17.11",
     "mongoose": "~5.7.7",
     "mongoose-simple-random": "~0.4.1",
-    "vision": "~5.4.4"
+    "vision": "~5.4.4",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "code": "~5.2.0",
@@ -75,6 +76,9 @@
     "setup": "npm run pumpitup",
     "pumpitup": "node ./data/load-sample-data.js",
     "test": "cross-env NODE_ENV=test lab --assert code --leaks --coverage --lint",
-    "lint": "./node_modules/eslint/bin/eslint.js . --fix --ext .js"
-  }
+    "lint": "./node_modules/eslint/bin/eslint.js . --fix --ext .js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
